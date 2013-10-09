@@ -76,6 +76,7 @@ module.exports = function(app){
 
         var next = function(err, data){
 
+
             if(!err){
                 data.title = "this is a generic title";
                 res.render('index', data);
