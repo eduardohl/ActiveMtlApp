@@ -4,11 +4,11 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          paths: ["src/less"],
+          paths: ["assets/less"],
           yuicompress: false
         },
         files: {
-          "public/stylesheets/style.css": "src/less/*.less"
+          "public/stylesheets/style.css": "assets/less/*.less"
         }
       }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['src/less/*.less', 'public/javascripts/src/*.js'],
+      files: ['assets/less/*.less', 'public/javascripts/src/*.js'],
       tasks: ['default'],
       options: {
         nospawn: true
