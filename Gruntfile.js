@@ -19,9 +19,9 @@ module.exports = function(grunt) {
       },
       dist: {
         // the files to concatenate
-        src: ['public/javascripts/src/flightboard.js','public/javascripts/src/default.js'],
+        src: ['public/javascripts/src/*.js'],
         // the location of the resulting JS file
-        dest: 'public/javascripts/main.js'
+        dest: 'public/javascripts/javascript.js'
       }
     },
     watch: {
@@ -36,6 +36,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  
   grunt.registerTask('default', ['less:development', 'concat', 'watch']);
 };

@@ -12,12 +12,14 @@
     "less-middleware": "~0.1.12",
     "grunt-contrib-jade": "~0.8.0",
     "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-less": "~0.7.0"
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "0.5.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jade": "0.8.0",
     "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-less": "~0.7.0"
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "0.5.3"
   }
 }
