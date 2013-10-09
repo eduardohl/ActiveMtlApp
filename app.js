@@ -30,7 +30,11 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use( express.cookieParser() );
 app.use(app.router);
+
 app.use(express.session({ secret: 'very_unique_eco_hack_secret_string', cookie: { maxAge: 1800000 }}));
+
+app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only

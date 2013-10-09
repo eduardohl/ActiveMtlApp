@@ -16,5 +16,7 @@
     "grunt-contrib-concat": "0.3.0",
     "grunt-contrib-less": "~0.7.0",
     "less-middleware": "~0.1.12",
+    "grunt-contrib-watch": "0.5.3"
+
   }
 }

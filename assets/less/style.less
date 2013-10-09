@@ -1,0 +1,307 @@
+/*
+
+ActiveMTL Toolbox
+Émile Aublet
+Nurun Inc. 
+v1.0
+
+*/
+
+/* IMPORTS */
+@import "elements.less"; 
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+/* VARIABLES */
+@width: 340;
+@em: 16px;
+@roundcorners: 5px;
+
+@mainColor: #36b35a;
+@alternateColor: #2da148;
+@grayColor: #929292;
+@lightColor: #e6e6e6;
+@darkColor: #333333;
+@fbColor: #4665a6;
+@alertColor: #9c2a27;
+
+@problemesColor: #facf33;
+@defisColor:#56c23c;
+@ideesColor:#3391fa;
+
+.eco{ background-image: url(img/eco.png); background-size: 150px;}
+.rain{ background-image: url(img/rain.png); background-size: 150px;}
+.wave{ background-image: url(img/wave.png); background-size: 60px;}
+
+.font {font-family: 'Varela Round', Helvetica, Arial, sans-serif;}
+
+
+
+/* MAIN */
+*{
+	.box-sizing(border-box);
+}
+
+body{
+	.eco;
+	background-color: @mainColor;
+	margin: 0px;
+	padding: 0px;
+	font-size: @em;
+	.font;
+	color:@darkColor;
+			text-align: center;
+	h4{
+		color: #fff; 
+
+	}
+}
+img.logo{
+	max-width: @width*0.6px;
+	margin: 2em auto;
+	display: block; 
+}
+.container{
+	.rounded(@roundcorners);
+	h4{
+		color: @darkColor;
+		border-bottom: 1px solid lighten(@grayColor, 20%);
+		padding-bottom: 1em;
+	}
+	//.eco;
+	width: (@width * 1px);
+	margin: 2em auto;
+	padding: @em;
+	background-color: lighten(@lightColor, 3%);
+}
+section{
+	margin-bottom: 100px;
+}
+
+/* TYPO */
+h1 {
+	font-size: 2.125em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+h5 {
+	font-size: .8em;
+	margin: 0px;
+	color: @grayColor;
+}
+a {
+	text-decoration: underline;
+	text-align: center;
+	display: block;
+	color: @darkColor;
+}
+
+/* BOUTONS */
+.bt{
+	.rounded(@roundcorners);
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin-bottom: @em * 0.6;
+	padding: (@em *  0.8) 0px;
+	position: relative;
+	.drop-shadow(0, 2px, 2px, 0.3);
+	.gradient(@mainColor, darken(@mainColor, 5%), lighten(@mainColor, 3%));
+	color: #fff;
+	&:hover{
+		.gradient(@mainColor, darken(@mainColor, 10%), lighten(@mainColor, 3%));
+	}
+	&:active{
+		.gradient(@mainColor, lighten(@mainColor, 5%), darken(@mainColor, 10%));
+		top: 1px;
+		.drop-shadow(0, 0px, 5px, 0.2);
+	}
+	&.alternate{
+		.gradient(@lightColor, darken(@lightColor, 14%), lighten(@lightColor, 100%));
+		color: @darkColor;
+		&:hover{
+			.gradient(@lightColor, darken(@lightColor, 20%), lighten(@lightColor, 10%));
+		}
+		&:active{
+			.gradient(@lightColor, lighten(@lightColor, 5%), darken(@lightColor, 10%));
+		}
+	}
+	&.facebook{
+		.gradient(@fbColor, darken(@fbColor, 8%), lighten(@fbColor, 3%));
+		color: #fff;
+		&:hover{
+			.gradient(@fbColor, darken(@fbColor, 10%), lighten(@fbColor, 10%));
+		}
+		&:active{
+			.gradient(@fbColor, lighten(@fbColor, 5%), darken(@fbColor, 10%));
+		}
+	}
+	&.alert{
+		.gradient(@alertColor, darken(@alertColor, 5%), lighten(@alertColor, 3%));
+		color: #fff;
+		&:hover{
+			.gradient(@alertColor, darken(@alertColor, 8%), lighten(@alertColor, 6%));
+		}
+		&:active{
+			.gradient(@alertColor, lighten(@alertColor, 5%), darken(@alertColor, 10%));
+		}
+	}
+
+}
+
+/* FORMS */
+input[type="text"]{
+	.rounded(@roundcorners);
+	width: 100%;
+	display: block;
+	padding: (@em *  0.8);
+	font-size: @em;
+	.font;
+	border: 1px solid lighten(@grayColor, 20%);
+	background-color: rgba(256,256,256,.6);
+	&:focus { 
+	    outline: none;
+	    //border-color: @grayColor;
+	    background-color: rgba(256,256,256,1);
+	    //box-shadow: 0 0 10px @mainColor;
+	    &::-webkit-input-placeholder {color: @grayColor;}
+		&:-moz-placeholder { /* Firefox 18- */color: @grayColor;  }
+		&::-moz-placeholder {  /* Firefox 19+ */color: @grayColor;  }
+		&:-ms-input-placeholder {  color: @grayColor;  }
+	}
+}
+ul.form{
+	padding-left: 0px;
+	list-style: none;
+	li{
+		input[type="text"]{
+			margin: 0px!important;
+			.rounded(0px);
+
+		}
+		&:first-child{
+			input[type="text"]{
+				border-bottom: 0px;
+				.border-radius(@roundcorners, 0, 0, @roundcorners);
+			}
+			}
+		&:last-child{
+			input[type="text"]{
+				border-top: 0px;
+				.border-radius(0px, @roundcorners, @roundcorners, 0px);
+
+			}
+			}
+	}
+}
+
+/* LISTES */
+ul.list{
+	list-style: none;
+	padding-left: 0px;
+	background-color: rgba(256,256,256,.9);
+	text-align: left;
+	&.problemes{border-left: 3px solid @problemesColor;}
+	&.idees{border-left: 3px solid @ideesColor;}
+	&.defis{border-left: 3px solid @defisColor;}
+	li{
+		padding: 0.5em;
+		border-bottom: 1px solid @lightColor;
+
+	&.item{
+		display: block;
+		height: 3.6em;
+		background-image: url(img/arrow.png);
+		background-repeat: no-repeat;
+		background-position: 96%;
+		background-size: 10px;
+		&:hover{
+			background-color: lighten(@lightColor, 6%);
+		}
+		img{
+			float: left;
+			width: 2.5em;
+		}
+		p{
+			margin: 0px;
+			margin-left: 0.6em!important;
+			float: left;
+			&.desc1{
+				font-size: .85em;
+				padding-top: .4em
+			}
+			&.desc2{
+				font-size: 70%;
+				color: @grayColor;
+			}
+		}
+	}
+	}
+}
+
+
+/* IMGS */
+img{
+	
+	&.square{
+		background-color: #fff;
+		border: 1px solid @lightColor;
+		padding: .2em;
+		.rounded(@roundcorners);
+	}
+	&.circle{
+		.rounded(100px;)
+	}
+}
+
+/* LES FONDS */
+.bg{
+	height: 5em;
+	line-height: 5em;
+	text-align: center;
+	background-color: #fff;
+	&.vert{background-color: @mainColor; color: #fff;}
+	&.blanc{background-color: @lightColor; color: @darkColor;}
+	&.wave{background-color: #8a45c4; color: #fff;}
+	&.rain{background-color: @ideesColor; color:#fff;}
+}
+
+/* LES COULEURS */
+.color{
+	border-left: 1px solid rgba(0,0,0,.2);
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-top: 1px solid rgba(0,0,0,.2);
+	//border-bottom: 1px solid rgba(0,0,0,.2);
+	width: 100%;
+	height: 3em;
+	&.maincolor{background-color: @mainColor;}
+	&.alternatecolor{background-color: @alternateColor;}
+	&.problemescolor{background-color: @problemesColor;}
+	&.defiscolor{background-color: @defisColor;}
+	&.ideescolor{background-color: @ideesColor;}
+	&.darkcolor{background-color: @darkColor;}
+	&.graycolor{background-color: @grayColor;}
+	&.lightcolor{background-color: @lightColor;border-bottom: 1px solid rgba(0,0,0,.2);}
+}
+
+/* MISC */
+.clear {clear: both;}
+.icon{
+	img{
+		width: 4.5em; float: left
+	}
+	p{
+		line-height: 2.5em;
+		float: left;
+		padding-left: 1em;
+	}
+}
+.download{width: @width * 1px; display: block; margin: 0px auto;}
