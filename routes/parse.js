@@ -86,7 +86,7 @@ module.exports = (function(){
 		},
 
 		getAlert: function(id, callback){
-
+			
 		},
 
 		getLatest: function(callback){
