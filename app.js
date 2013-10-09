@@ -43,13 +43,10 @@ if ('development' == app.get('env')) {
 }
 
 
-
-
 app.get('/', routes.index);
-app.get('/homelist', routes.index);
-app.get('/issues', routes.index);
-app.get('/challenges', routes.index);
-app.get('/ideas', routes.index);
+app.get('/issues', routes.issues);
+app.get('/challenges', routes.challenges);
+app.get('/ideas', routes.ideas);
 
 app.get('/users', user.list);
 
