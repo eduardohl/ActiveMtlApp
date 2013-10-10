@@ -3,6 +3,29 @@
  * GET home page.
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+
+module.exports = function(app){
+    return {
+        index:index
+    };
+
+
+    function index(req, res){
+
+        var options = app.utils.getResquestLocation(req);
+
+        var next = function(err, data){
+
+            if(err === false){
+                data.title = "this is a generic title";
+                console.log("test",data);
+                res.render('index', data);
+            } else {
+                res.render('404', { errorMessage: 'Express' });
+            }
+
+        };
+
+        app.parse.getDetail('2LEyOGoSZY', next);
+    }
+}
