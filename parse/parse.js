@@ -12,10 +12,7 @@ module.exports = function(){
         getIdeas: getIdeas,
         getChallenges: getChallenges,
         getAlerts: getAlerts,
-        getIdea: getIdea,
-        getChallenge: getChallenge,
-        getAlert: getAlert,
-        getLatest: getLatest
+        getDetail: getDetail
     };
 
     /*
@@ -42,35 +39,60 @@ module.exports = function(){
 	 * Challenge objects list order by location proximity
 	*/
 	function getChallenges(options, callback){
-		callback(false, []);
+		var params = {
+			where: {
+				eventType: 'Challenge'
+			}
+		};
+
+		Parse.getObjects('Event', params, function(err, res, body, success){
+			var error = false;
+			if(!success){
+				error = true;
+			}
+
+			callback(error, body);
+		});
 	};
 
 	/*
 	 * Alert objects list order by location proximity
 	*/
 	function getAlerts(options, callback){
-		callback(false, []);
+		var params = {
+			where: {
+				eventType: 'Alert'
+			}
+		};
+
+		Parse.getObjects('Event', params, function(err, res, body, success){
+			var error = false;
+			if(!success){
+				error = true;
+			}
+
+			callback(error, body);
+		});
 	};	
 
 	/*
-	 * Idea single object
+	 * Single object by ID
 	*/
-	function getIdea(id, callback){
-		callback(false, []);
-	};
+	function getDetail(id, callback){
+		var params = {
+			where: {
+				objectId: id
+			}
+		};
 
-	/*
-	 * Challenge single object
-	*/
-	function getChallenge(id, callback){
-		callback(false, {});
-	};
+		Parse.getObject('Event', id, function(err, res, body, success){
+			var error = false;
+			if(!success){
+				error = true;
+			}
 
-	/*
-	 * Alert single object
-	*/
-	function getAlert(id, callback){
-		callback(false, {});
+			callback(error, body);
+		});
 	};
 
 	/*

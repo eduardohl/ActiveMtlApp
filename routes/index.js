@@ -26,6 +26,6 @@ module.exports = function(app){
 
         };
 
-        app.parse.getIdeas(options, next);
+        app.parse.getDetail('2LEyOGoSZY', next);
     }
 }
