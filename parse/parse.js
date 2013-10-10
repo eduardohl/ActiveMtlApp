@@ -8,21 +8,6 @@ module.exports = function(){
 
 	var Parse = Parse || new Kaiseki(settings.ApiKey, settings.RESTApiKey);
 
-	var params = {
-		where: {
-			eventType: 'Alert',
-			location: {
-	          "$nearSphere": {
-	            "__type": "GeoPoint",
-	            "latitude": 45.4850394,
-	            "longitude": -73.5602582
-	          }
-	        }
-		},
-		limit: 3,
-		count: true
-	};
-
 	var extractParams = function(params, options){
 		if(options.hasOwnProperty('latitude') && options.hasOwnProperty('longitude')){
 			params.location = {
@@ -61,7 +46,7 @@ module.exports = function(){
 				error = true;
 			}
 
-			callback(error, body);
+			callback.apply(null, [error, body]);
 		});
 	};
 
@@ -81,7 +66,7 @@ module.exports = function(){
 				error = true;
 			}
 
-			callback(error, body);
+			callback.apply(null, [error, body]);
 		});
 	};
 
@@ -101,7 +86,7 @@ module.exports = function(){
 				error = true;
 			}
 
-			callback(error, body);
+			callback.apply(null, [error, body]);
 		});
 	};	
 
@@ -121,7 +106,7 @@ module.exports = function(){
 				error = true;
 			}
 
-			callback(error, body);
+			callback.apply(null, [error, body]);
 		});
 	};
 
@@ -129,6 +114,20 @@ module.exports = function(){
 	 * Homepage content list 
 	*/
 	function getLatest(callback){
-		callback(false, []);
+
+		Parse._jsonRequest({
+      		url: '/1/functions/getLatestEvents',
+      		method: 'POST',
+      		headers: { 'Content-type': 'application/json'},
+      		params: {},
+	      	callback: function(err, res, body, success) {
+	        	var error = false;
+	        	if (err && !success){
+	        		error = true;
+	        	}
+
+	        	callback.apply(null, [false, body]);
+	      	}
+	    });
 	};
 }
