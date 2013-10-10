@@ -7,15 +7,13 @@
 module.exports = function(app){
     return {
         index:index,
-        issues:issues,
+        alerts:alerts,
         challenges:challenges,
         ideas:ideas,
-        details:details
+        detail:detail
     };
 
     function index(req, res){
-
-        var options = {};
 
         var next = function(err, data){
 
@@ -28,11 +26,11 @@ module.exports = function(app){
 
         };
 
-        app.parse.getHome(options, next);
+        app.parse.getLatest(next);
 
     }
 
-    function issues(req, res){
+    function alerts(req, res){
 
         var options = app.utils.getResquestLocation(req);
 
@@ -47,7 +45,7 @@ module.exports = function(app){
 
         };
 
-        app.parse.getIssues(options, next);
+        app.parse.getAlerts(options, next);
 
     }
 
@@ -75,8 +73,6 @@ module.exports = function(app){
         var options = app.utils.getResquestLocation(req);
 
         var next = function(err, data){
-
-
             if(!err){
                 data.title = "this is a generic title";
                 res.render('index', data);
@@ -90,7 +86,7 @@ module.exports = function(app){
 
     }
 
-    function details(req, res){
+    function detail(req, res){
 
         var options = app.utils.getResquestLocation(req);
 
@@ -105,7 +101,7 @@ module.exports = function(app){
 
         };
 
-        app.parse.getDetails(options, next);
+        app.parse.getDetail(options, next);
 
     }
 

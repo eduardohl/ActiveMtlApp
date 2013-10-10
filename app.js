@@ -44,9 +44,13 @@ if ('development' == app.get('env')) {
 
 
 app.get('/', routes.index);
-app.get('/issues', routes.issues);
-app.get('/challenges', routes.challenges);
-app.get('/ideas', routes.ideas);
+app.get('/issues/', routes.alerts);
+app.get('/issues/:lat/:lon', routes.alerts);
+app.get('/challenges/', routes.challenges);
+app.get('/challenges/:lat/:lon', routes.challenges);
+app.get('/ideas/', routes.ideas);
+app.get('/ideas/:lat/:lon', routes.ideas);
+app.get('/details/:id', routes.detail);
 
 app.get('/users', user.list);
 
