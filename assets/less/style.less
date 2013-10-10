@@ -19,6 +19,7 @@ v1.0
 @mainColor: #36b35a;
 @alternateColor: #2da148;
 @grayColor: #929292;
+@purpColor: #8a45c4;
 @lightColor: #e6e6e6;
 @darkColor: #333333;
 @fbColor: #4665a6;
@@ -28,9 +29,9 @@ v1.0
 @defisColor:#56c23c;
 @ideesColor:#3391fa;
 
-.eco{ background-image: url(img/eco.png); background-size: 150px;}
-.rain{ background-image: url(img/rain.png); background-size: 150px;}
-.wave{ background-image: url(img/wave.png); background-size: 60px;}
+.eco{ background-image: url(../img/eco.png); background-size: 150px;}
+.rain{ background-image: url(../img/rain.png); background-size: 150px;}
+.wave{ background-image: url(../img/wave.png); background-size: 60px;}
 
 .font {font-family: 'Varela Round', Helvetica, Arial, sans-serif;}
 
@@ -156,6 +157,49 @@ a {
 	}
 
 }
+.actionBtn{
+	
+	a{
+		text-decoration:none;
+		padding:0.5em 0.8em;
+		background-image: url(../img/arrowLight.png);
+		background-repeat: no-repeat;
+		background-position: 96%;
+		background-size: 10px;	
+		
+		img{
+			float:left;
+			margin-right:0.7em;
+			width:2.3em;
+		}
+		p{
+			margin:0.1em 0 0;
+			font-size:0.85em;
+			text-align:left;
+			span{
+				font-size:0.7em;
+			}
+		}
+	}
+	
+	&.ideesColors{
+		background-color:@ideesColor;
+		p{ color:#fff; }
+		&:hover{
+			background-color: lighten(@ideesColor, 5%);
+		}
+	}
+
+	&.purpColor{
+		background-color:@purpColor;
+		p{ color:#fff; }
+		&:hover{
+			background-color: lighten(@purpColor, 5%);
+		}
+	}
+	&.wave{ background-size:40px; }
+	&.rain{ background-size:100px; }
+}
 
 /* FORMS */
 input[type="text"]{
@@ -219,7 +263,7 @@ ul.list{
 	&.item{
 		display: block;
 		height: 3.6em;
-		background-image: url(img/arrow.png);
+		background-image: url(../img/arrow.png);
 		background-repeat: no-repeat;
 		background-position: 96%;
 		background-size: 10px;
@@ -244,6 +288,7 @@ ul.list{
 			}
 		}
 	}
+	&.title h5{ font-weight:normal; }
 	}
 }
 
@@ -270,7 +315,7 @@ img{
 	background-color: #fff;
 	&.vert{background-color: @mainColor; color: #fff;}
 	&.blanc{background-color: @lightColor; color: @darkColor;}
-	&.wave{background-color: #8a45c4; color: #fff;}
+	&.wave{background-color: @purpColor; color: #fff;}
 	&.rain{background-color: @ideesColor; color:#fff;}
 }
 
