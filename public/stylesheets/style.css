@@ -23,15 +23,15 @@ v1.0
   ---------------------------------------------------*/
 /* VARIABLES */
 .eco {
-  background-image: url(img/eco.png);
+  background-image: url(../img/eco.png);
   background-size: 150px;
 }
 .rain {
-  background-image: url(img/rain.png);
+  background-image: url(../img/rain.png);
   background-size: 150px;
 }
 .wave {
-  background-image: url(img/wave.png);
+  background-image: url(../img/wave.png);
   background-size: 60px;
 }
 .font {
@@ -45,7 +45,7 @@ v1.0
   box-sizing: border-box;
 }
 body {
-  background-image: url(img/eco.png);
+  background-image: url(../img/eco.png);
   background-size: 150px;
   background-color: #36b35a;
   margin: 0px;
@@ -223,6 +223,51 @@ a {
   background: -o-linear-gradient(#731f1d, #b02f2c);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#731f1d', endColorstr='#b02f2c', GradientType=0);
 }
+.actionBtn a {
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  background-image: url(../img/arrowLight.png);
+  background-repeat: no-repeat;
+  background-position: 96%;
+  background-size: 10px;
+}
+.actionBtn a img {
+  float: left;
+  margin-right: 0.7em;
+  width: 2.3em;
+}
+.actionBtn a p {
+  margin: 0.1em 0 0;
+  font-size: 0.85em;
+  text-align: left;
+}
+.actionBtn a p span {
+  font-size: 0.7em;
+}
+.actionBtn.ideesColors {
+  background-color: #3391fa;
+}
+.actionBtn.ideesColors p {
+  color: #fff;
+}
+.actionBtn.ideesColors:hover {
+  background-color: #4c9efb;
+}
+.actionBtn.purpColor {
+  background-color: #8a45c4;
+}
+.actionBtn.purpColor p {
+  color: #fff;
+}
+.actionBtn.purpColor:hover {
+  background-color: #9658ca;
+}
+.actionBtn.wave {
+  background-size: 40px;
+}
+.actionBtn.rain {
+  background-size: 100px;
+}
 /* FORMS */
 input[type="text"] {
   -webkit-border-radius: 5px;
@@ -323,7 +368,7 @@ ul.list li {
 ul.list li.item {
   display: block;
   height: 3.6em;
-  background-image: url(img/arrow.png);
+  background-image: url(../img/arrow.png);
   background-repeat: no-repeat;
   background-position: 96%;
   background-size: 10px;
@@ -347,6 +392,9 @@ ul.list li.item p.desc1 {
 ul.list li.item p.desc2 {
   font-size: 70%;
   color: #929292;
+}
+ul.list li.title h5 {
+  font-weight: normal;
 }
 /* IMGS */
 img.square {
