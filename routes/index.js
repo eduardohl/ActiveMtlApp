@@ -3,7 +3,6 @@
  * GET home page.
  */
 
-
 module.exports = function(app){
     return {
         index:index,
@@ -27,7 +26,6 @@ module.exports = function(app){
         };
 
         app.parse.getLatest(next);
-
     }
 
     function alerts(req, res){

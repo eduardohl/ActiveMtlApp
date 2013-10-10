@@ -44,6 +44,7 @@ if ('development' == app.get('env')) {
 
 
 app.get('/', routes.index);
+app.get('/homelist', routes.index);
 app.get('/issues/', routes.alerts);
 app.get('/issues/:lat/:lon', routes.alerts);
 app.get('/challenges/', routes.challenges);
