@@ -26,6 +26,6 @@ module.exports = function(app){
 
         };
 
-        app.parse.getDetail('2LEyOGoSZY', next);
+        app.parse.getIdeas({latitude: 45.5722257, longitude: -73.5351202}, next);
     }
 }
