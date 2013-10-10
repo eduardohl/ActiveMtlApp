@@ -8,11 +8,41 @@ module.exports = function(){
 
 	var Parse = Parse || new Kaiseki(settings.ApiKey, settings.RESTApiKey);
 
+	var params = {
+		where: {
+			eventType: 'Alert',
+			location: {
+	          "$nearSphere": {
+	            "__type": "GeoPoint",
+	            "latitude": 45.4850394,
+	            "longitude": -73.5602582
+	          }
+	        }
+		},
+		limit: 3,
+		count: true
+	};
+
+	var extractParams = function(params, options){
+		if(options.hasOwnProperty('latitude') && options.hasOwnProperty('longitude')){
+			params.location = {
+				"$nearSphere": {
+	            	"__type": "GeoPoint",
+	            	"latitude": options.latitude,
+	            	"longitude": options.longitude
+	        	}
+			};
+		}
+
+		return params;
+	};
+
 	return {
         getIdeas: getIdeas,
         getChallenges: getChallenges,
         getAlerts: getAlerts,
-        getDetail: getDetail
+        getDetail: getDetail,
+        getLatest: getLatest
     };
 
     /*
@@ -20,9 +50,9 @@ module.exports = function(){
 	*/
     function getIdeas(options, callback){
 		var params = {
-			where: {
+			where: extractParams({
 				eventType: 'Idea'
-			}
+			}, options)
 		};
 
 		Parse.getObjects('Event', params, function(err, res, body, success){
@@ -40,9 +70,9 @@ module.exports = function(){
 	*/
 	function getChallenges(options, callback){
 		var params = {
-			where: {
+			where: extractParams({
 				eventType: 'Challenge'
-			}
+			}, options)
 		};
 
 		Parse.getObjects('Event', params, function(err, res, body, success){
@@ -60,9 +90,9 @@ module.exports = function(){
 	*/
 	function getAlerts(options, callback){
 		var params = {
-			where: {
+			where: extractParams({
 				eventType: 'Alert'
-			}
+			}, options)
 		};
 
 		Parse.getObjects('Event', params, function(err, res, body, success){

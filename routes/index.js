@@ -34,6 +34,7 @@ module.exports = function(app){
 
         var next = function(err, data){
 
+            console.log("error",err, data);
             if(!err){
                 data.title = "this is a generic title";
                 res.render('index', data);
@@ -101,6 +102,8 @@ module.exports = function(app){
         };
 
         app.parse.getDetail(options, next);
+
+       //app.parse.getIdeas({latitude: 45.5722257, longitude: -73.5351202}, next);
 
     }
 

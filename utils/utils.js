@@ -6,10 +6,11 @@ module.exports = function(){
 
     function getResquestLocation(req){
 
+        console.log(req.params);
         if(req.params.lat !== undefined && req.params.lon !== undefined){
             return {
-                latitude: req.params.lat,
-                longitude: req.params.lon
+                latitude: parseFloat(req.params.lat),
+                longitude: parseFloat(req.params.lon)
             };
         } else {
             return {};
