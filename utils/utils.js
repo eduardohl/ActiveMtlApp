@@ -18,7 +18,11 @@ module.exports = function(){
     };
 
     function getRequestedElemId(req){
-       return req.params.id;
+        if(req.params.lat !== undefined){
+            return req.params.id;
+        } else {
+            return null
+        }
     };
 
 }

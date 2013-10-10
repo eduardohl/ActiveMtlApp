@@ -82,6 +82,7 @@ module.exports = function(app){
 
         };
 
+
         app.parse.getIdeas(options, next);
 
     }
@@ -92,7 +93,7 @@ module.exports = function(app){
 
         var next = function(err, data){
 
-            if(!err){
+            if(!err && options !== null){
                 data.title = "this is a generic title";
                 res.render('index', data);
             } else {
