@@ -158,9 +158,8 @@ a {
 
 }
 .actionBtn{
-	
-	a{
-		text-decoration:none;
+	text-decoration:none;
+	> div{		
 		padding:0.5em 0.8em;
 		background-image: url(../img/arrowLight.png);
 		background-repeat: no-repeat;
@@ -185,7 +184,8 @@ a {
 	&.ideesColors{
 		background-color:@ideesColor;
 		p{ color:#fff; }
-		&:hover{
+		&:hover,
+		&:active{
 			background-color: lighten(@ideesColor, 5%);
 		}
 	}
@@ -193,7 +193,8 @@ a {
 	&.purpColor{
 		background-color:@purpColor;
 		p{ color:#fff; }
-		&:hover{
+		&:hover,
+		&:active{
 			background-color: lighten(@purpColor, 5%);
 		}
 	}
@@ -256,18 +257,18 @@ ul.list{
 	&.problemes{border-left: 3px solid @problemesColor;}
 	&.idees{border-left: 3px solid @ideesColor;}
 	&.defis{border-left: 3px solid @defisColor;}
-	li{
+	li.item a{
+		position:relative;
 		padding: 0.5em;
 		border-bottom: 1px solid @lightColor;
-
-	&.item{
 		display: block;
 		height: 3.6em;
 		background-image: url(../img/arrow.png);
 		background-repeat: no-repeat;
 		background-position: 96%;
 		background-size: 10px;
-		&:hover{
+		&:hover,
+		&:active{
 			background-color: lighten(@lightColor, 6%);
 		}
 		img{
@@ -278,6 +279,7 @@ ul.list{
 			margin: 0px;
 			margin-left: 0.6em!important;
 			float: left;
+			text-align:left;
 			&.desc1{
 				font-size: .85em;
 				padding-top: .4em
@@ -287,9 +289,31 @@ ul.list{
 				color: @grayColor;
 			}
 		}
+		span.more{
+			display:block;
+			width:1.5em;
+			height:1.5em;
+			position:absolute;
+			left:3.2em;
+			top:0.5em;
+			text-decoration:none;
+			font-size:0.7em;
+			font-weight:bold;
+			color:#fff;
+			line-height:1em;
+			background-color:@defisColor;
+			.rounded(100px;);
+			
+			&.plus{
+				line-height:1.5em;
+			}
+			&.onSquare{
+				left:3.5em;
+				top:0.3em;
+			}
+		}
 	}
-	&.title h5{ font-weight:normal; }
-	}
+	li.title h5{ padding: 0.5em; border-bottom: 1px solid @lightColor; font-weight:normal; }
 }
 
 

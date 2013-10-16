@@ -223,25 +223,27 @@ a {
   background: -o-linear-gradient(#731f1d, #b02f2c);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#731f1d', endColorstr='#b02f2c', GradientType=0);
 }
-.actionBtn a {
+.actionBtn {
   text-decoration: none;
+}
+.actionBtn > div {
   padding: 0.5em 0.8em;
   background-image: url(../img/arrowLight.png);
   background-repeat: no-repeat;
   background-position: 96%;
   background-size: 10px;
 }
-.actionBtn a img {
+.actionBtn > div img {
   float: left;
   margin-right: 0.7em;
   width: 2.3em;
 }
-.actionBtn a p {
+.actionBtn > div p {
   margin: 0.1em 0 0;
   font-size: 0.85em;
   text-align: left;
 }
-.actionBtn a p span {
+.actionBtn > div p span {
   font-size: 0.7em;
 }
 .actionBtn.ideesColors {
@@ -250,7 +252,8 @@ a {
 .actionBtn.ideesColors p {
   color: #fff;
 }
-.actionBtn.ideesColors:hover {
+.actionBtn.ideesColors:hover,
+.actionBtn.ideesColors:active {
   background-color: #4c9efb;
 }
 .actionBtn.purpColor {
@@ -259,7 +262,8 @@ a {
 .actionBtn.purpColor p {
   color: #fff;
 }
-.actionBtn.purpColor:hover {
+.actionBtn.purpColor:hover,
+.actionBtn.purpColor:active {
   background-color: #9658ca;
 }
 .actionBtn.wave {
@@ -361,11 +365,10 @@ ul.list.idees {
 ul.list.defis {
   border-left: 3px solid #56c23c;
 }
-ul.list li {
+ul.list li.item a {
+  position: relative;
   padding: 0.5em;
   border-bottom: 1px solid #e6e6e6;
-}
-ul.list li.item {
   display: block;
   height: 3.6em;
   background-image: url(../img/arrow.png);
@@ -373,27 +376,55 @@ ul.list li.item {
   background-position: 96%;
   background-size: 10px;
 }
-ul.list li.item:hover {
+ul.list li.item a:hover,
+ul.list li.item a:active {
   background-color: #f5f5f5;
 }
-ul.list li.item img {
+ul.list li.item a img {
   float: left;
   width: 2.5em;
 }
-ul.list li.item p {
+ul.list li.item a p {
   margin: 0px;
   margin-left: 0.6em!important;
   float: left;
+  text-align: left;
 }
-ul.list li.item p.desc1 {
+ul.list li.item a p.desc1 {
   font-size: .85em;
   padding-top: 0.4em;
 }
-ul.list li.item p.desc2 {
+ul.list li.item a p.desc2 {
   font-size: 70%;
   color: #929292;
 }
+ul.list li.item a span.more {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  left: 3.2em;
+  top: 0.5em;
+  text-decoration: none;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1em;
+  background-color: #56c23c;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+ul.list li.item a span.more.plus {
+  line-height: 1.5em;
+}
+ul.list li.item a span.more.onSquare {
+  left: 3.5em;
+  top: 0.3em;
+}
 ul.list li.title h5 {
+  padding: 0.5em;
+  border-bottom: 1px solid #e6e6e6;
   font-weight: normal;
 }
 /* IMGS */
