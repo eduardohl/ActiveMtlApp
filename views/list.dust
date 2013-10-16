@@ -1,0 +1,19 @@
+{>layout/}
+{<content}
+	<div class="container">
+		{#data}
+		<div class="eco">
+			<a class="wave" href="/" data-id="" data-action="openDetail">
+				<img src="{#picture.url}{picture.url}{:else}{/picture.url}" />
+				<span>{title}</span>
+			</a>
+			<div>
+				<a href="/" data-id="{objectId}" data-action="openShare">&nbsp;</a>
+				<a href="/" data-id="{#user.id}{user.id}{:else}podel{/user.id}" data-action="openProfil">
+					<img src="{#user.picture.url}{user.picture.url}{:else}/{/user.picture.url}" />
+				</a>
+			</div>
+		</div>
+		{/data}
+	</div>
+{/content}

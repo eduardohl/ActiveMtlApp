@@ -32,11 +32,8 @@ module.exports = function(app){
         var options = app.utils.getResquestLocation(req);
 
         var next = function(err, data){
-
-            console.log("error",err, data);
             if(!err){
-                data.title = "this is a generic title";
-                res.render('index', data);
+                res.render('list', {data: data});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
@@ -52,12 +49,10 @@ module.exports = function(app){
         var options = app.utils.getResquestLocation(req);
 
         var next = function(err, data){
-
             if(!err){
-                data.title = "this is a generic title";
-                res.render('index', data);
+                res.render('list', data);
             } else {
-                res.render('404', { errorMessage: 'Express' });
+                res.render('404', {errorMessage: 'Express'});
             }
 
         };
@@ -73,11 +68,10 @@ module.exports = function(app){
         var next = function(err, data){
             if(!err){
                 data.title = "this is a generic title";
-                res.render('index', data);
+                res.render('list', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
-
         };
 
 
