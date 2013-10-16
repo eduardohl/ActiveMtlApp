@@ -1,28 +1,100 @@
 {>layout/}
 {<content}
+	 
+      <article>
+      <h4>{title}</h4>
+  		
+      </article>
+
 	{data}
-
-	{#result.ideas}
+	<section>
+	<ul class="list idees">
+		<li class="title">
+			<h5>Dernières idées relevées</h5>
+		</li>
+		{#result.ideas}
+		<li class="item">
+			<a href="/" data-id="{objectId}" data-action="openDetail">
+				<img src="{picture.url}" class="circle">
+				<p class="desc1">{district}</p>
+				<p class="desc2">{title}</p>
+			</a>
+			<div class="clear"></div>
+		</li>
+		<!--
 		{objectId}<br />
 		{title}<br />
 		{description}<br />
 		{picture.url}<br />
 		{district}<br />
-	{/result.ideas}
+		-->
+		{/result.ideas}
+	</ul>
 
-	{#result.challenges}
+	<a href="#" class="actionBtn rain ideesColors">
+		<div>
+			<img src="img/rainDrops.png" />
+			<p>
+				<span>Défi de la semaine</span><br />
+				Récupérer l'eau de pluie
+			</p>
+			<div class="clear"></div>
+		</div>
+	</a>
+
+	<ul class="list defis">
+		<li class="title">
+			<h5>Derniers défis relevés</h5>
+		</li>
+		{#result.challenges}
+		<li class="item">
+			<a href="#">
+				<img src="{picture.url}" class="circle">
+				<p class="desc1">{title}</p>
+			</a>
+			<div class="clear"></div>
+		</li>
+		<!--
 		{objectId}<br />
 		{title}<br />
 		{description}<br />
 		{picture.url}<br />
 		{district}<br />
-	{/result.challenges}
+		-->
+		{/result.challenges}
+	</ul>
 
-	{#result.alerts}
-		<a href="/" data-id="{objectId}" data-action="openDetail">{objectId}</a><br />
+	<a href="#" class="actionBtn wave purpColor">
+		<div>
+			<img src="img/eolians.png" />
+			<p>
+			<span>Défi de la semaine</span><br />
+			Récupérer l'eau de pluie
+			</p>
+			<div class="clear"></div>
+		</div>
+	</a>
+
+	<ul class="list problemes">
+		<li class="title">
+			<h5>Derniers problèmes enregistrés</h5>
+		</li>
+		{#result.alerts}
+		<li class="item">
+			<a href="/" data-id="{objectId}" data-action="openDetail">
+				<img src="{picture.url}" class="circle">
+				<p class="desc1">{district}</p>
+				<p class="desc2">{title}</p>
+			</a>
+			<div class="clear"></div>
+		</li>
+		<!--
 		{title}<br />
 		{description}<br />
 		{picture.url}<br />
 		{district}<br />
-	{/result.alerts}
+		-->
+		{/result.alerts}
+	</ul>
+	</section>
 {/content}

@@ -1,7 +1,7 @@
 {>layout/}
 {<content}
-	<div class="container">
-		{#data}
+	<section>
+	{#data}
 		<div class="eco">
 			<a class="wave" href="/" data-id="" data-action="openDetail">
 				<img src="{#picture.url}{picture.url}{:else}{/picture.url}" />
@@ -14,6 +14,6 @@
 				</a>
 			</div>
 		</div>
-		{/data}
-	</div>
+	{/data}
+	</section>
 {/content}

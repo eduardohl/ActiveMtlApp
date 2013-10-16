@@ -7,10 +7,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    {#title}<h1>{title}</h1>{/title}
-		{+content}
-			This is the base content.
-		{/content}
+    <div class="container">
+      {#title}<h1>{title}</h1>{/title}
+  		{+content}
+  			This is the base content.
+  		{/content}
+    </div>
   </body>
 <!--
 {session}
