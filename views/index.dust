@@ -1,4 +1,28 @@
 {>layout/}
 {<content}
 	{data}
+
+	{#result.ideas}
+		{objectId}<br />
+		{title}<br />
+		{description}<br />
+		{picture.url}<br />
+		{district}<br />
+	{/result.ideas}
+
+	{#result.challenges}
+		{objectId}<br />
+		{title}<br />
+		{description}<br />
+		{picture.url}<br />
+		{district}<br />
+	{/result.challenges}
+
+	{#result.alerts}
+		<a href="/" data-id="{objectId}" data-action="openDetail">{objectId}</a><br />
+		{title}<br />
+		{description}<br />
+		{picture.url}<br />
+		{district}<br />
+	{/result.alerts}
 {/content}

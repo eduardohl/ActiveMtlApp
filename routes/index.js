@@ -22,7 +22,6 @@ module.exports = function(app){
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
-
         };
 
         app.parse.getLatest(next);
