@@ -51,7 +51,7 @@ app.get('/challenges', routes.challenges);
 app.get('/challenges/:lat/:lon', routes.challenges);
 app.get('/ideas', routes.ideas);
 app.get('/ideas/:lat/:lon', routes.ideas);
-app.get('/details/:id', routes.detail);
+app.get('/detail/:id', routes.detail);
 
 app.get('/users', user.list);
 
