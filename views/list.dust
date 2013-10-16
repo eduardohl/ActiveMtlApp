@@ -3,7 +3,7 @@
 	<section>
 	{#data}
 		<div class="eco">
-			<a class="wave" href="/" data-id="" data-action="openDetail">
+			<a class="wave" href="/" data-id="{objectId}" data-action="openDetail">
 				<img src="{#picture.url}{picture.url}{:else}{/picture.url}" />
 				<span>{title}</span>
 			</a>
