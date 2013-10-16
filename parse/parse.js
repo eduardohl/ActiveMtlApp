@@ -94,12 +94,7 @@ module.exports = function(){
 	 * Single object by ID
 	*/
 	function getDetail(id, callback){
-		var params = {
-			where: {
-				objectId: id
-			}
-		};
-
+		
 		Parse.getObject('Event', id, function(err, res, body, success){
 			var error = false;
 			if(!success){

@@ -87,24 +87,17 @@ module.exports = function(app){
 
     function detail(req, res){
 
-        var options = app.utils.getResquestLocation(req);
+        var options = app.utils.getRequestedElemId(req);
 
         var next = function(err, data){
 
             if(!err && options !== null){
-                data.title = "this is a generic title";
-                res.render('index', data);
+                res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
-
         };
 
         app.parse.getDetail(options, next);
-
-       //app.parse.getIdeas({latitude: 45.5722257, longitude: -73.5351202}, next);
-
     }
-
-
 }

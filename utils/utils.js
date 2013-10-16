@@ -6,7 +6,6 @@ module.exports = function(){
 
     function getResquestLocation(req){
 
-        console.log(req.params);
         if(req.params.lat !== undefined && req.params.lon !== undefined){
             return {
                 latitude: parseFloat(req.params.lat),
@@ -19,7 +18,7 @@ module.exports = function(){
     };
 
     function getRequestedElemId(req){
-        if(req.params.lat !== undefined){
+        if(req.params.id !== undefined){
             return req.params.id;
         } else {
             return null
