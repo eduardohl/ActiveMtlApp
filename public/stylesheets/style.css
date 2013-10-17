@@ -530,3 +530,6 @@ body.home .container > section {
   position: relative;
   top: -20px;
 }
+html {
+  background: transparent;
+}
