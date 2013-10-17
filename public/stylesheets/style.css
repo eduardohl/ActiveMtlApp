@@ -526,3 +526,6 @@ body.home {
 body.home .container {
   padding-top: 0px;
 }
+body.home .container > section > ul:first-child {
+  margin-top: 0;
+}
