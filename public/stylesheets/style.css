@@ -520,15 +520,8 @@ section.list p.desc1 {
   width: 100%;
 }
 body.home {
-  background: transparent;
+  padding: 0;
 }
 body.home .container {
   padding-top: 0px;
-}
-body.home .container > section {
-  position: relative;
-  top: -20px;
-}
-html {
-  background: transparent;
 }
