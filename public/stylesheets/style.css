@@ -521,6 +521,7 @@ section.list p.desc1 {
 }
 body.home {
   padding: 0;
+  background: none;
 }
 body.home .container {
   padding-top: 0px;
