@@ -1,19 +1,18 @@
 {>layout/}
 {<content}
 	<section class="list">
-	{#data}
-		<div class="eco">
-			<a class="wave" href="/" data-id="{objectId}" data-action="openDetail">
-				<img src="{#picture.url}{picture.url}{:else}{/picture.url}" />
-				<span>{title}</span>
-			</a>
-			<div>
-				<a href="/" data-id="{objectId}" data-action="openShare">&nbsp;</a>
-				<a href="/" data-id="{#user.id}{user.id}{:else}podel{/user.id}" data-action="openProfil">
-					<img src="{#user.picture.url}{user.picture.url}{:else}/{/user.picture.url}" />
-				</a>
-			</div>
-		</div>
-	{/data}
+		<ul class="list {#data.type}{data.type}{:else}problemes{/data.type}">
+		{#data}
+			<li class="item">
+	            <a href="/" data-id="{objectId}" data-action="openDetail">
+	              <img class="square" src="{picture.url}">
+	              <p class="desc1">{title}</p>
+	              <p class="desc2">{description}</p>
+	              <span class="more onSquare">...</span>
+	            </a>
+	            <div class="clear"></div>
+          	</li>
+		{/data}
+		</ul>
 	</section>
 {/content}

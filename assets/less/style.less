@@ -70,7 +70,7 @@ img.logo{
 	}
 	//.eco;
 	//width: (@width * 1px);
-	margin: 2em auto;
+	margin: 0 auto;
 	padding: @em;
 	background-color: lighten(@lightColor, 3%);
 }
@@ -381,9 +381,10 @@ img{
 
 /* Listing */
 section.list {
-	> div {
-		margin-bottom: 20px;
-		box-shadow: 0 2px 2px #000;
-
+	p.desc2, p.desc1 {
+		white-space: nowrap;
+		overflow: hidden;
+  		text-overflow: ellipsis;
+		width: 100%;
 	}
 }

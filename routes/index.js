@@ -33,6 +33,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
+                data.type = "problemes";
                 res.render('list', {data: data});
             } else {
                 res.render('404', { errorMessage: 'Express' });
@@ -50,7 +51,8 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                res.render('list', data);
+                data.type = "defis";
+                res.render('list', {data: data});
             } else {
                 res.render('404', {errorMessage: 'Express'});
             }
@@ -67,8 +69,8 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                data.title = "this is a generic title";
-                res.render('list', data);
+                data.type = "idees";
+                res.render('list', {data: data});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }

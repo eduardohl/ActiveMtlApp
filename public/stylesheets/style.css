@@ -64,7 +64,7 @@ img.logo {
   display: block;
 }
 .container {
-  margin: 2em auto;
+  margin: 0 auto;
   padding: 16px;
   background-color: #eeeeee;
 }
@@ -512,7 +512,10 @@ img.circle {
   margin: 0px auto;
 }
 /* Listing */
-section.list > div {
-  margin-bottom: 20px;
-  box-shadow: 0 2px 2px #000;
+section.list p.desc2,
+section.list p.desc1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }

@@ -11,12 +11,6 @@ var App = App || {
                 } else console.log(id);
         },
 
-        openProfil: function(id){
-                if(this.isBridgeAvailable()){
-                        alert('User : ' + id);
-                } else console.log(id);
-        },
-
         isBridgeAvailable: function(){
                 var available = false;
                 if(typeof(ActiveMTL) !== 'undefined'){
