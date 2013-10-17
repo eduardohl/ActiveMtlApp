@@ -1,11 +1,5 @@
 {>layout/}
 {<content}
-	 
-      <article>
-      <h4>{title}</h4>
-  		
-      </article>
-
 	{data}
 	<section>
 	<ul class="list idees">
@@ -15,7 +9,11 @@
 		{#result.ideas}
 		<li class="item">
 			<a href="/" data-id="{objectId}" data-action="openDetail">
-				<img src="{picture.url}" class="circle">
+				{?picture.url}
+				<img src="{picture.url}" class="circle" />
+				{:else}
+				<img src="../img/idee.png" class="circle" />
+				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
 			</a>
@@ -28,6 +26,14 @@
 		{picture.url}<br />
 		{district}<br />
 		-->
+		{:else}
+		<li class="item">
+			<a href="#">
+				<img src="../img/idee.png" class="circle" />
+				<p class="desc1">Il n'y a pas d'idées pour l'instant</p>
+			</a>
+			<div class="clear"></div>
+		</li>
 		{/result.ideas}
 	</ul>
 
@@ -49,11 +55,17 @@
 		{#result.challenges}
 		<li class="item">
 			<a href="#">
-				<img src="{picture.url}" class="circle">
+				{?picture.url}
+				<img src="{picture.url}" class="circle" />
+				{:else}
+				<img src="../img/defi.png" class="circle" />
+				{/picture.url}
 				<p class="desc1">{title}</p>
 			</a>
 			<div class="clear"></div>
 		</li>
+
+
 		<!--
 		{objectId}<br />
 		{title}<br />
@@ -61,6 +73,14 @@
 		{picture.url}<br />
 		{district}<br />
 		-->
+		{:else}
+		<li class="item">
+			<a href="#">
+				<img src="../img/defi.png" class="circle" />
+				<p class="desc1">Il n'y a pas de défis pour l'instant</p>
+			</a>
+			<div class="clear"></div>
+		</li>
 		{/result.challenges}
 	</ul>
 
@@ -82,7 +102,11 @@
 		{#result.alerts}
 		<li class="item">
 			<a href="/" data-id="{objectId}" data-action="openDetail">
-				<img src="{picture.url}" class="circle">
+				{?picture.url}
+					<img src="{picture.url}" class="circle" />
+				{:else}
+					<img src="../img/probleme.png" class="circle" />
+				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
 			</a>
@@ -94,6 +118,14 @@
 		{picture.url}<br />
 		{district}<br />
 		-->
+		{:else}
+		<li class="item">
+			<a href="#">
+				<img src="../img/probleme.png" class="circle" />
+				<p class="desc1">Il n'y a pas de problèmes pour l'instant</p>
+			</a>
+			<div class="clear"></div>
+		</li>
 		{/result.alerts}
 	</ul>
 	</section>
