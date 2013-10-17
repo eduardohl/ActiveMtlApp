@@ -1,7 +1,8 @@
 module.exports = function(){
     return {
         getResquestLocation:getResquestLocation,
-        getRequestedElemId: getRequestedElemId
+        getRequestedElemId: getRequestedElemId,
+        getUserId:getUserId
     };
 
     function getResquestLocation(req){
@@ -23,6 +24,15 @@ module.exports = function(){
         } else {
             return null
         }
+    };
+
+    function getUserId(req){
+        if(req.query.user !== {}){
+            return req.query.user;
+        } else {
+            return null;
+        }
+
     };
 
 }

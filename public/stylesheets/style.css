@@ -1,3 +1,10 @@
+article.detail #map-canvas {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin-bottom: 2em;
+}
+
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
@@ -518,4 +525,10 @@ section.list p.desc1 {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+}
+article.detail #map-canvas {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin-bottom: 2em;
 }

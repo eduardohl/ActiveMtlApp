@@ -84,10 +84,13 @@ module.exports = function(app){
     function detail(req, res){
 
         var options = app.utils.getRequestedElemId(req);
-
+        var userid = app.utils.getUserId(req);
         var next = function(err, data){
 
             if(!err && options !== null){
+                if(userid !== null){
+                    data.user = userid;
+                }
                 res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });

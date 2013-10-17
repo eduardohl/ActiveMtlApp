@@ -1,4 +1,52 @@
 {>layout/}
 {<content}
-	{title}
+
+
+<article class="detail {eventType}">
+
+    <h1>{Category}</h1>
+    <div id="map-canvas" data-latitude="{location.latitude}" data-longitude="{location.longitude}"></div>
+    <span class="district">{district}</span>
+
+    <div class="content">
+        <div class="pic">
+            <img src="{picture.url}" />
+        </div>
+        <div class="header">
+            <h2>{title}</h2>
+            <span class="author">posted by {author}, {createdAt}</span>
+            <span class="status">{Status}</span>
+        </div>
+        <div class="description">
+             {description}
+        </div>
+        <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
+        <a href="#" data-user="{user}">Résolu?</a>
+
+    </div>
+</article>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5LrdX5vG-VbsuDiIYp4-oi5c72Q0Dsbo&sensor=true"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var $mapcanvas = $("#map-canvas");
+        var myLatlng = new google.maps.LatLng($mapcanvas.attr("data-latitude"), $mapcanvas.attr("data-longitude"));
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title:"{title}"
+        });
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+
 {/content}
