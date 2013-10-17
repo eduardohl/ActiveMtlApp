@@ -17,6 +17,7 @@ module.exports = function(app){
         var next = function(err, data){
 
             if(!err){
+                data.context = "home";
                 res.render('index', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });

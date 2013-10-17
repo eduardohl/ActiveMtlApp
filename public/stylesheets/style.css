@@ -519,3 +519,14 @@ section.list p.desc1 {
   text-overflow: ellipsis;
   width: 100%;
 }
+body.home {
+  background: transparent;
+  padding-top: 25px;
+}
+body.home .container {
+  padding-top: 0px;
+}
+body.home .container > section {
+  position: relative;
+  top: -20px;
+}
