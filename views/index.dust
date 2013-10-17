@@ -64,8 +64,6 @@
 			</a>
 			<div class="clear"></div>
 		</li>
-
-
 		<!--
 		{objectId}<br />
 		{title}<br />
@@ -103,9 +101,9 @@
 		<li class="item">
 			<a href="/" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
-					<img src="{picture.url}" class="circle" />
+					<img src="{picture.url}" class="square" />
 				{:else}
-					<img src="../img/probleme.png" class="circle" />
+					<img src="../img/probleme.png" class="square" />
 				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
