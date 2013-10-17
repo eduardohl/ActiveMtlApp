@@ -64,9 +64,6 @@ img.logo {
   display: block;
 }
 .container {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   margin: 2em auto;
   padding: 16px;
   background-color: #eeeeee;
@@ -513,4 +510,9 @@ img.circle {
   width: 340px;
   display: block;
   margin: 0px auto;
+}
+/* Listing */
+section.list > div {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 2px #000;
 }

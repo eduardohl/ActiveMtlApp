@@ -19,13 +19,13 @@ module.exports = function(grunt) {
       },
       dist: {
         // the files to concatenate
-        src: ['public/javascripts/src/*.js'],
+        src: ['assets/javascript/*.js'],
         // the location of the resulting JS file
         dest: 'public/javascripts/javascript.js'
       }
     },
     watch: {
-      files: ['assets/less/*.less', 'public/javascripts/src/*.js'],
+      files: ['assets/less/*.less', 'assets/javascript/*.js'],
       tasks: ['default'],
       options: {
         nospawn: true

@@ -62,7 +62,7 @@ img.logo{
 	display: block; 
 }
 .container{
-	.rounded(@roundcorners);
+	//.rounded(@roundcorners);
 	h4{
 		color: @darkColor;
 		border-bottom: 1px solid lighten(@grayColor, 20%);
@@ -377,3 +377,13 @@ img{
 	}
 }
 .download{width: @width * 1px; display: block; margin: 0px auto;}
+
+
+/* Listing */
+section.list {
+	> div {
+		margin-bottom: 20px;
+		box-shadow: 0 2px 2px #000;
+
+	}
+}

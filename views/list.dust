@@ -1,6 +1,6 @@
 {>layout/}
 {<content}
-	<section>
+	<section class="list">
 	{#data}
 		<div class="eco">
 			<a class="wave" href="/" data-id="{objectId}" data-action="openDetail">
