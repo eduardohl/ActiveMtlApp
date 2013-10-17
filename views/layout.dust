@@ -6,14 +6,11 @@
     <script src="/javascripts/javascript.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
+  <body {#context}class="{context}"{:else}{/context}>
     <div class="container">
   		{+content}
   			This is the base content.
   		{/content}
     </div>
   </body>
-<!--
-{session}
--->
 </html>

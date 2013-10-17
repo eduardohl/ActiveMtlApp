@@ -17,7 +17,7 @@ module.exports = function(app){
         var next = function(err, data){
 
             if(!err){
-                data.title = "this is a generic title";
+                data.context = "home";
                 res.render('index', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });

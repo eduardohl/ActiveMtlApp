@@ -526,6 +526,16 @@ section.list p.desc1 {
   text-overflow: ellipsis;
   width: 100%;
 }
+body.home {
+  padding: 0;
+  background: none;
+}
+body.home .container {
+  padding: 0px;
+}
+body.home .container > section > ul:first-child {
+  margin-top: 0;
+}
 article.detail #map-canvas {
   width: 100%;
   height: 300px;
