@@ -26,9 +26,10 @@
 
     </div>
 </article>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5LrdX5vG-VbsuDiIYp4-oi5c72Q0Dsbo&sensor=true"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript">
-
+        //API Key : AIzaSyC5LrdX5vG-VbsuDiIYp4-oi5c72Q0Dsbo
+        
         var imagepath = '';
 
          switch('{eventType}'){
