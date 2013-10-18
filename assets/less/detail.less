@@ -1,8 +1,81 @@
+@problemesColor: #facf33;
+@defisColor:#56c23c;
+@ideesColor:#3391fa;
+
 article.detail{
+    overflow:hidden;
+    text-align:left;
     #map-canvas{
         width:100%;
         height:300px;
         display:block;
-        margin-bottom:2em;
+        margin-bottom:1.5em;
     }
+
+   h1{
+       margin:0;
+       .district{
+           font-size: 0.5em;
+       }
+   }
+   .pic{
+       width:25%;
+       margin-right:2%;
+       float:left;
+       margin-bottom:2em;
+       img{
+           width: 100%;
+       }
+   }
+   .header{
+       width:70%;
+       float:left;
+       h2{
+           margin-top:-5px;
+           margin-bottom:0;
+           font-size: 1.5em;
+       }
+       .author{
+           font-size: 0.7em;
+           margin-bottom: 10px;
+           display: block;
+       }
+       .status{
+           display:block;
+           margin-top:5px;
+           margin-bottom:5px;
+           font-size: 1.2em;
+           padding:10px;
+           border: 1px solid rgba(0, 0, 0, 0.2);
+           &.Alert{background-color:@problemesColor;}
+           &.Challenge{background-color:@defisColor;}
+           &.Idea{background-color:@ideesColor;}
+       }
+   }
+   .description{
+       width:70%;
+       float:left;
+       .btn{
+           display:block;
+           margin-top:5px;
+           margin-bottom:5px;
+           font-size: 1.2em;
+           padding:10px;
+           border: 1px solid rgba(0, 0, 0, 0.2);
+           &.Alert{background-color:@problemesColor;}
+           &.Challenge{background-color:@defisColor;}
+           &.Idea{background-color:@ideesColor;}
+       }
+       .text{
+           margin-top:5px;
+           margin-bottom:10px;
+       }
+       .votes{
+           display:block;
+           a{
+               display:inline;
+               margin-left:5px;
+           }
+       }
+   }
 }

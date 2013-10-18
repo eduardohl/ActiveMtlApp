@@ -91,6 +91,14 @@ module.exports = function(app){
                 if(userid !== null){
                     data.user = userid;
                 }
+                console.log("data.Statut",data.Statut);
+                if(data.Statut === 'True'){
+                    data.Status = {text:'dummy'};
+                }
+
+                var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
+                data.timeago = timeAgo;
+
                 res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
