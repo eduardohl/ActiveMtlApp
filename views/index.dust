@@ -12,9 +12,8 @@
 					<img src="{picture.url}" class="circle" />
 				{:else}
 					<span class="icon circle">
-
+						<img src="../img/idee_icon_square.png" class="circle" />
 					</span>
-					<img src="../img/idee.png" class="circle" />
 				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>

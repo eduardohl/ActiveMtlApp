@@ -528,17 +528,22 @@ ul.list li.title h5 {
 }
 .icon.circle {
   border-radius: 50px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
-  background: #fff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 }
-.idees icon.circle {
-  background: #fff;
+.icon.circle img {
+  width: 2em !important;
+  height: auto !important;
+  top: 4px !important;
+  left: 4px !important;
 }
-.problemes icon.circle {
-  background: #fff;
+.idees .icon.circle {
+  background: #e1efff;
 }
-.defis icon.circle {
-  background: #fff;
+.problemes .icon.circle {
+  background: #fff3de;
+}
+.defis .icon.circle {
+  background: #e7ffde;
 }
 /* IMGS */
 img.square {
