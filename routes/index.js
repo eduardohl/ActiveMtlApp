@@ -98,8 +98,6 @@ module.exports = function(app){
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
 
-                console.log(data);
-
                 res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
