@@ -3,7 +3,7 @@
 	<section>
 	<ul class="list idees">
 		<li class="title">
-			<h5>Dernières idées relevées</h5>
+			<h5>Dernières idées soumises</h5>
 		</li>
 		{#result.ideas}
 		<li class="item">
@@ -44,7 +44,7 @@
 
 	<ul class="list defis">
 		<li class="title">
-			<h5>Derniers défis relevés</h5>
+			<h5>Autres défis proposés</h5>
 		</li>
 		{#result.challenges}
 		<li class="item">
@@ -55,6 +55,7 @@
 				<img src="../img/defi.png" class="square" />
 				{/picture.url}
 				<p class="desc1">{title}</p>
+				<p class="desc2">{Category}</p>
 				<span class="more onSquare">2452</span>
 			</a>
 			<div class="clear"></div>
@@ -69,7 +70,7 @@
 		</li>
 		{/result.challenges}
 	</ul>
-
+	<!-- 
 	<a href="#" class="actionBtn wave purpColor">
 		<div>
 			<img src="img/eolians.png" />
@@ -80,7 +81,7 @@
 			<div class="clear"></div>
 		</div>
 	</a>
-
+	//-->
 	<ul class="list problemes">
 		<li class="title">
 			<h5>Derniers problèmes enregistrés</h5>
