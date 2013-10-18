@@ -509,6 +509,37 @@ ul.list li.title h5 {
   border-bottom: 1px solid #e6e6e6;
   font-weight: normal;
 }
+.icon {
+  height: 2.5em;
+  left: 0.5em;
+  position: absolute;
+  top: 0.5em;
+  width: 2.5em;
+  display: block;
+}
+.icon.square {
+  background-color: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0.2em;
+}
+.icon.square img {
+  border-radius: 5px 5px 5px 5px;
+}
+.icon.circle {
+  border-radius: 50px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+.idees icon.circle {
+  background: #fff;
+}
+.problemes icon.circle {
+  background: #fff;
+}
+.defis icon.circle {
+  background: #fff;
+}
 /* IMGS */
 img.square {
   background-color: #fff;
@@ -610,7 +641,7 @@ body.home {
   background: none;
 }
 body.home .container {
-  padding: 0px;
+  padding: 20px;
 }
 body.home .container > section > ul:first-child {
   margin-top: 0;

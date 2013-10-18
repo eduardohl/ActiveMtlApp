@@ -8,8 +8,16 @@ var express = require('express')
   , http = require('http')
   , fs = require('fs')
   , path = require('path')
-  , cons = require('consolidate')
-  , dust = require('dustjs-linkedin');
+  , cons = require('consolidate');
+
+
+
+var helpers = {
+	podel: function(chunk, context, bodies, params){
+		console.log('podel');
+		return chunk.write(chunk);
+	}
+};
 
 var app = express();
 
@@ -18,12 +26,20 @@ app.parse = require('./parse/parse')();
 
 var routes = require('./routes/index')(app);
 
+cons.dust.helpers = helpers;
+
+
 app.engine('dust', cons.dust);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'dust');
+app.set('template_engine', 'dust');
+
+app.set('helpers', helpers);
+app.set('dust', cons.dust);
+
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
@@ -36,6 +52,8 @@ app.use(express.session({ secret: 'very_unique_eco_hack_secret_string', cookie: 
 app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // development only
 if ('development' == app.get('env')) {

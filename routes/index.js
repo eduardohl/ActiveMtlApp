@@ -78,7 +78,6 @@ module.exports = function(app){
 
 
         app.parse.getIdeas(options, next);
-
     }
 
     function detail(req, res){
@@ -91,13 +90,15 @@ module.exports = function(app){
                 if(userid !== null){
                     data.user = userid;
                 }
-                console.log("data.Statut",data.Statut);
+
                 if(data.Statut === 'True'){
-                    data.Status = {text:'dummy'};
+                    data.Status = {text: 'dummy'};
                 }
 
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
+
+                console.log(data);
 
                 res.render('detail', data);
             } else {

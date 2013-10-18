@@ -1,6 +1,5 @@
 {>layout/}
 {<content}
-	{data}
 	<section>
 	<ul class="list idees">
 		<li class="title">
@@ -10,22 +9,18 @@
 		<li class="item">
 			<a href="/" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
-				<img src="{picture.url}" class="circle" />
+					<img src="{picture.url}" class="circle" />
 				{:else}
-				<img src="../img/idee.png" class="circle" />
+					<span class="icon circle">
+
+					</span>
+					<img src="../img/idee.png" class="circle" />
 				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
 			</a>
 			<div class="clear"></div>
 		</li>
-		<!--
-		{objectId}<br />
-		{title}<br />
-		{description}<br />
-		{picture.url}<br />
-		{district}<br />
-		-->
 		{:else}
 		<li class="item">
 			<a href="#">
@@ -54,23 +49,17 @@
 		</li>
 		{#result.challenges}
 		<li class="item">
-			<a href="#">
+			<a href="#" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
-				<img src="{picture.url}" class="circle" />
+				<img src="{picture.url}" class="square" />
 				{:else}
-				<img src="../img/defi.png" class="circle" />
+				<img src="../img/defi.png" class="square" />
 				{/picture.url}
 				<p class="desc1">{title}</p>
+				<span class="more onSquare">2452</span>
 			</a>
 			<div class="clear"></div>
 		</li>
-		<!--
-		{objectId}<br />
-		{title}<br />
-		{description}<br />
-		{picture.url}<br />
-		{district}<br />
-		-->
 		{:else}
 		<li class="item">
 			<a href="#">

@@ -22,8 +22,6 @@
              <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
              {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
         </div>
-
-
     </div>
 </article>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5LrdX5vG-VbsuDiIYp4-oi5c72Q0Dsbo&sensor=true"></script>
