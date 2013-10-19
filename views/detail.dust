@@ -16,28 +16,101 @@
       </div>
       {/picture.url}
 
+
+
+      <!-- CHALLENGES -->
       {?challenge}
-    
-      <h1>{title}</h1>
-      <h2>{Category}<span class="district"> - {district}</span></h2>
-      {?Status}<span class="status {eventType}">Resolu</span>{/Status}
+        <h1>{title}</h1>
+        <h2>{Category}<span class="district"> - {district}</span></h2>
+        {?Status}<span class="status {eventType}">Resolu</span>{/Status}
 
-      <p class="text">{description|s}</p>
-      <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
-      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Relever ce défi</a>{/Status}
-
-      {:else}
-
-      <h1>{title}</h1>
-      <h2>{Category}<span class="district"> - {district}</span></h2>
-      <span class="author">soumis par {#owner}{owner}{/owner}, il y a {timeago}</span>
-      {?Status}<span class="status {eventType}">Resolu</span>{/Status}
-
-      <p class="text">{description|s}</p>
-      <div class="votes">{Vote} votes <a href="#" class="btn" data-user="{user}">+1</a></div>
-      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
-
+        <p class="text">{description|s}</p>
+        <div class="votes">
+        <span>{Vote} votes </span>
+        <a href="#" data-user="{user}" class="bt">Voter +1</a>
+        </div>
+        {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Relever ce défi</a>{/Status}
       {/challenge}
+
+
+
+      <!-- ALERTES -->
+      {?alert}
+        <h1>{title}</h1>
+        <h2>{Category}<span class="district"> - {district}</span></h2>
+        <span class="author">soumis par {#owner}{owner}{/owner}, il y a {timeago}</span>
+        {?Status}<span class="status {eventType}">Resolu</span>{/Status}
+
+        <p class="text">{description|s}</p>
+        <div class="votes">
+        
+        {?NoVote}
+        <span>Personne n'a encore appuyé cette alerte . Soyez le premier à voter pour l'appuyer!</span>
+        {/NoVote}
+
+        {?OneVote}
+        <span>[Paul P.] a appuyé pour cette alerte. Faites comme lui, donnez votre avis!</span>
+        {/OneVote}
+
+        {?TwoVotes}
+        <span>[Paul P.] et [Clara C.] ont appuyé pour cette alerte. Faites comme eux, donnez votre avis!</span>
+        {/TwoVotes}
+
+        {?ThreeVotes}
+        <span>[Paul P.] et [Clara C.] et [X] autres Montréalais ont voté pour cette alerte. Faites comme eux, donnez votre avis!</span>
+        {/ThreeVotes}
+
+        {?MultiVotes}
+        <span>{Vote} autres Montréalais ont voté pour cette alerte. Faites comme eux, donnez votre avis!</span>
+        {/MultiVotes}
+
+        <a href="#" class="btn bt{?alert} alert{/alert}{?idea} Idea{/idea}" data-user="{user}">Appuyez cette alerte</a>
+
+        </div>
+        
+        {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
+      {/alert}
+
+
+
+      <!-- IDEES -->
+      {?idea}
+        <h1>{title}</h1>
+        <h2>{Category}<span class="district"> - {district}</span></h2>
+        <span class="author">soumis par {#owner}{owner}{/owner}, il y a {timeago}</span>
+        {?Status}<span class="status {eventType}">Resolu</span>{/Status}
+
+        <p class="text">{description|s}</p>
+        <div class="votes">
+        
+        {?NoVote}
+        <span>Personne n'a encore soutenu cette suggestion. Soyez le premier à voter pour la soutenir!</span>
+        {/NoVote}
+
+        {?OneVote}
+        <span>[Paul P.] a soutenu cette suggestion. Faites comme lui, donnez votre avis!</span>
+        {/OneVote}
+
+        {?TwoVotes}
+        <span>[Paul P.] et [Clara C.] ont soutenu cette suggestion. Faites comme eux, donnez votre avis!</span>
+        {/TwoVotes}
+
+        {?ThreeVotes}
+        <span>[Paul P.] et [Clara C.] et [X] autres Montréalais ont voté pour cette suggestion. Faites comme eux, donnez votre avis!</span>
+        {/ThreeVotes}
+
+        {?MultiVotes}
+        <span>{Vote} votes</span>
+        {/MultiVotes}
+
+        <a href="#" class="btn bt Idea" data-user="{user}">Soutenez cette suggestion</a>
+
+        </div>
+        
+        {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
+      {/idea}
+
+      
 
 
     </div>

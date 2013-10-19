@@ -103,6 +103,9 @@ article.detail .content .votes a {
   width: auto;
   margin-left: 5px;
 }
+article.detail .content .votes span {
+  display: block;
+}
 article.detail .description {
   width: 70%;
   float: left;
@@ -881,6 +884,9 @@ article.detail .content .votes a {
   float: left;
   width: auto;
   margin-left: 5px;
+}
+article.detail .content .votes span {
+  display: block;
 }
 article.detail .description {
   width: 70%;
