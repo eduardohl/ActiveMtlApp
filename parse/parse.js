@@ -97,12 +97,13 @@ module.exports = function(){
 		var id = options.id
 		  , params = {userId: null};
 
-		if(options.userId){
+		if(options.hasOwnProperty('userId') && options.userId){
 			params.userId = options.userId;
 		}
 
 		Parse.getObject('Event', id, params, function(err, res, body, success){
 			var error = false;
+
 			if(!success){
 				error = true;
 			}
