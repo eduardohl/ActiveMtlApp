@@ -122,6 +122,6 @@ module.exports = function(app){
             }
         };
 
-        app.parse.getDetail(options, next);
+        app.parse.getDetail({id: options, userId: userId}, next);
     }
 }
