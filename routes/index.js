@@ -62,7 +62,7 @@ module.exports = function(app){
                 var highlight = data.splice(0, 1)
                   , data = data.slice(1);
 
-                res.render('list', {total: data.length, data: data, type: "defis", icon: "defi", challenge: true});
+                res.render('list', {total: data.length, highlight: highlight, data: data, type: "defis", icon: "defi", challenge: true});
             } else {
                 res.render('404', {errorMessage: 'Express'});
             }

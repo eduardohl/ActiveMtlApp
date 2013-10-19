@@ -1,7 +1,20 @@
 {>layout/}
 {<content}
 	<section class="list">
-		<div>
+		{#highlight}
+		<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail" class="actionBtn rain defisColors">
+			<div>
+				<img src="img/defi_icon_square.png" />
+				<p>
+					<span>Défi de la semaine</span><br />
+					{title}
+				</p>
+				<div class="clear"></div>
+			</div>
+		</a>
+		{/highlight}
+
+		<div class="calltoaction">
 			<span class="{icon}"><img src="../img/{icon}_icon_square.png" /></span>
 			<p><span>{total}</span> 
 			{?alert}incidents signalés{/alert}
