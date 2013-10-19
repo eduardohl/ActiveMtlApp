@@ -56,9 +56,9 @@ module.exports = function(){
 	*/
 	function getChallenges(options, callback){
 		var params = {
-			where: extractParams({
+			where: {
 				eventType: 'Challenge'
-			}, options)
+			}
 		};
 
 		Parse.getObjects('Event', params, function(err, res, body, success){
