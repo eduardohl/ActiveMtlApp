@@ -67,10 +67,10 @@ article.detail .content .status.Alert {
   background-color: #facf33;
 }
 article.detail .content .status.Challenge {
-  background-color: #56c23c;
+  background-color: #46be2a;
 }
 article.detail .content .status.Idea {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 article.detail .content a {
   display: inline;
@@ -90,10 +90,10 @@ article.detail .content .btn.Alert {
   background-color: #facf33;
 }
 article.detail .content .btn.Challenge {
-  background-color: #56c23c;
+  background-color: #46be2a;
 }
 article.detail .content .btn.Idea {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 article.detail .content .votes {
   display: block;
@@ -145,6 +145,13 @@ v1.1
 .rain {
   background-image: url(../img/rain.png);
   background-size: 150px;
+}
+.rain.defisColors {
+  background-color: #46be2a;
+  border: none;
+}
+.rain.defisColors img {
+  border-radius: 50px;
 }
 .wave {
   background-image: url(../img/wave.png);
@@ -403,14 +410,14 @@ a {
   font-size: 0.7em;
 }
 .actionBtn.ideesColors {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 .actionBtn.ideesColors p {
   color: #fff;
 }
 .actionBtn.ideesColors:hover,
 .actionBtn.ideesColors:active {
-  background-color: #4c9efb;
+  background-color: #3995fc;
 }
 .actionBtn.purpColor {
   background-color: #8a45c4;
@@ -516,10 +523,10 @@ ul.list.problemes {
   border-left: 3px solid #facf33;
 }
 ul.list.idees {
-  border-left: 3px solid #3391fa;
+  border-left: 3px solid #2088fc;
 }
 ul.list.defis {
-  border-left: 3px solid #56c23c;
+  border-left: 3px solid #46be2a;
 }
 ul.list li.item a {
   position: relative;
@@ -575,7 +582,7 @@ ul.list li.item a span.more {
   font-weight: bold;
   color: #fff;
   line-height: 1em;
-  background-color: #56c23c;
+  background-color: #46be2a;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -665,7 +672,7 @@ img.circle {
   color: #fff;
 }
 .bg.rain {
-  background-color: #3391fa;
+  background-color: #2088fc;
   color: #fff;
 }
 /* LES COULEURS */
@@ -686,10 +693,10 @@ img.circle {
   background-color: #facf33;
 }
 .color.defiscolor {
-  background-color: #56c23c;
+  background-color: #46be2a;
 }
 .color.ideescolor {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 .color.darkcolor {
   background-color: #333333;
@@ -736,6 +743,47 @@ body.home .container {
 }
 body.home .container > section > ul:first-child {
   margin-top: 0;
+}
+section.list > a {
+  margin-bottom: 20px;
+}
+section.list > div.calltoaction {
+  background: #fff;
+  border: 1px solid #E6E6E6;
+  display: block;
+  min-height: 3.6em;
+  padding: 0.5em 3.5em;
+  position: relative;
+  text-decoration: none;
+}
+section.list > div.calltoaction > span {
+  display: block;
+  width: 3.6em;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+section.list > div.calltoaction > span.idee {
+  background: #2088fc;
+}
+section.list > div.calltoaction > span.defi {
+  background: #46be2a;
+}
+section.list > div.calltoaction > span.alert {
+  background: #facf33;
+}
+section.list > div.calltoaction img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  margin-top: -1.8em;
+}
+section.list > div.calltoaction p {
+  text-align: left;
+  padding-left: 1.6em;
 }
 /* IMPORTS */
 article.detail {
@@ -798,10 +846,10 @@ article.detail .content .status.Alert {
   background-color: #facf33;
 }
 article.detail .content .status.Challenge {
-  background-color: #56c23c;
+  background-color: #46be2a;
 }
 article.detail .content .status.Idea {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 article.detail .content a {
   display: inline;
@@ -821,10 +869,10 @@ article.detail .content .btn.Alert {
   background-color: #facf33;
 }
 article.detail .content .btn.Challenge {
-  background-color: #56c23c;
+  background-color: #46be2a;
 }
 article.detail .content .btn.Idea {
-  background-color: #3391fa;
+  background-color: #2088fc;
 }
 article.detail .content .votes {
   display: block;
