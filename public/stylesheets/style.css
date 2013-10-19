@@ -78,9 +78,11 @@ article.detail .content a {
 article.detail .content .btn {
   display: block;
   float: left;
+  width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 1.2em;
+  text-decoration: none;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -801,9 +803,11 @@ article.detail .content a {
 article.detail .content .btn {
   display: block;
   float: left;
+  width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 1.2em;
+  text-decoration: none;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
