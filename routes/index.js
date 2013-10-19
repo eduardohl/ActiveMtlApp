@@ -43,7 +43,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                res.render('list', {data: data, type: "problemes", icon: "alert", alert: true});
+                res.render('list', {total: data.length, data: data, type: "problemes", icon: "alert", alert: true});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
@@ -59,7 +59,10 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                res.render('list', {data: data, type: "defis", icon: "defi", challenge: true});
+                var highlight = data.splice(0, 1)
+                  , data = data.slice(1);
+
+                res.render('list', {total: data.length, data: data, type: "defis", icon: "defi", challenge: true});
             } else {
                 res.render('404', {errorMessage: 'Express'});
             }
@@ -76,7 +79,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                res.render('list', {data: data, type: "idees", icon: "idee", idea: true});
+                res.render('list', {total: data.length, data: data, type: "idees", icon: "idee", idea: true});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }

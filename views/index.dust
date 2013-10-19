@@ -34,9 +34,9 @@
 		{/result.ideas}
 	</ul>
 	{#result.highlight}
-	<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail" class="actionBtn rain ideesColors">
+	<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail" class="actionBtn rain defisColors">
 		<div>
-			<img src="img/rainDrops.png" />
+			<img src="img/defi_icon_square.png" />
 			<p>
 				<span>Défi de la semaine</span><br />
 				{title}

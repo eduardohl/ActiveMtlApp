@@ -1,6 +1,15 @@
 {>layout/}
 {<content}
 	<section class="list">
+		<div>
+			<span class="{icon}"><img src="../img/{icon}_icon_square.png" /></span>
+			<p><span>{total}</span> 
+			{?alert}incidents signalés{/alert}
+			{?challenge}Autres défis à relever{/challenge}
+			{?idea}idées pour améliorer Montréal{/idea}
+			</p>
+		</div>
+
 		<ul class="list {#type}{type}{:else}problemes{/type}">
 		{#data}
 			<li class="item">

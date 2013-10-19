@@ -13,7 +13,17 @@ v1.1
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 .eco{ background-image: url(../img/eco.png); background-size: 150px;}
-.rain{ background-image: url(../img/rain.png); background-size: 150px;}
+.rain{ 
+	background-image: url(../img/rain.png); background-size: 150px;
+	&.defisColors {
+		background-color: @defisColor;
+		border: none;
+
+		img {
+			border-radius: 50px;
+		}
+	}
+}
 .wave{ background-image: url(../img/wave.png); background-size: 60px;}
 
 .font {font-family: 'Varela Round', Helvetica, Arial, sans-serif;}
@@ -442,6 +452,50 @@ body.home {
 		}
 	}
 }
+
+section.list {
+	> div:first-child {
+		background: #fff;
+	    border: 1px solid #E6E6E6;
+	    display: block;
+	    min-height: 3.6em;
+	    padding: 0.5em 3.5em;
+	    position: relative;
+	    text-decoration: none;
+	    > span {
+	    	display: block;
+	    	width: 3.6em; 
+	    	height: 100%;
+	    	position: absolute;
+	    	left: 0; top: 0;
+	    	overflow: hidden;
+
+	    	&.idee {
+	    		background: @ideesColor;
+	    	}
+
+	    	&.defi {
+	    		background: @defisColor;
+	    	}
+
+	    	&.alert {
+	    		background: @problemesColor;
+	    	}
+	    }
+	    img {
+	    	position: absolute;
+	    	left: 0; top: 50%;
+	    	width: 100%;
+	    	margin-top: -1.8em;
+	    }
+
+	    p {
+	    	text-align: left;
+	    	padding-left: 1.6em;
+	    }
+	}
+}
+
 
 
 
