@@ -4,16 +4,18 @@
 
 <article class="detail {eventType}">
 
-    <h1>{Category}<span class="district"> - {district}</span></h1>
-    <div id="map-canvas" data-latitude="{location.latitude}" data-longitude="{location.longitude}"></div>
-
+    
+    <div id="mapContainer">
+      <div id="map-canvas" data-latitude="{location.latitude}" data-longitude="{location.longitude}"></div>
+    </div>
 
     <div class="content">
         <div class="pic">
-            <img src="{picture.url}" />
+            <img src="{picture.url}" class="square" />
         </div>
         <div class="header">
-            <h2>{title}</h2>
+            <h1>{title}</h1>
+            <h2>{Category}<span class="district"> - {district}</span></h2>
             <span class="author">soumis par {author}, il y a {timeago}</span>
             {?Status}<span class="status {eventType}">Resolu</span>{/Status}
         </div>
