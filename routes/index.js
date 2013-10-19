@@ -146,17 +146,32 @@ module.exports = function(app){
                     }
                 }
 
-                var owner = data.createdBy;
-                if(owner.objectId){
-                    app.parse.getUser(owner.objectId, function(err, user){
-                        if(!err){
-                            data.owner = user.username;
-                            res.render('detail', data);
-                        } else {
-                            res.render('404', { errorMessage: 'Express' });
+                app.parse.getEventStats(data.objectId, function(err, rep){
+                    if(!err){
+                        if(rep.hasOwnProperty('result')){
+                            var r = rep.result;
+                            if(r.hasOwnProperty('eventAuthor')){
+                                data.username = r.eventAuthor;
+                            }
+
+                            if(r.hasOwnProperty('count_actions')){
+                                data.actionCount = r.count_actions;
+                            }
+
+                            if(r.hasOwnProperty('latestActions')){
+                                if(r.latestActions.length > 0){
+                                    data.latestUser1 = r.latestActions[0];
+                                }
+
+                                if(r.latestActions.length > 1){
+                                    data.latestUser2 = r.latestActions[1];
+                                }
+                            }
                         }
-                    });
-                } else res.render('detail', data);
+                    }
+
+                    res.render('detail', data);
+                });
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
