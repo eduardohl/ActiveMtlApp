@@ -104,6 +104,7 @@ module.exports = function(app){
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
 
+                //Event type
                 switch(data.eventType){
                     case 'Challenge': 
                         data.challenge = true;
@@ -114,6 +115,15 @@ module.exports = function(app){
                     default:
                         data.alert = true;
                     break;
+                }
+
+                //Location override
+                console.log(data);
+                if(data.location){
+                    var loc = data.location;
+                    if(loc.latitude == 0.0 && loc.longitude == 0.0){
+                        data.location = null;
+                    }
                 }
 
                 res.render('detail', data);

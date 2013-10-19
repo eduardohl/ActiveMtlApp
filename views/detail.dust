@@ -4,11 +4,10 @@
 
 <article class="detail {eventType}">
 
-    
     <div id="mapContainer">
       <div id="map-canvas" data-latitude="{location.latitude}" data-longitude="{location.longitude}"></div>
     </div>
-
+    
     <div class="content">
         <div class="pic">
             <img src="{picture.url}" class="square" />
