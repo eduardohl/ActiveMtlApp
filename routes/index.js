@@ -18,6 +18,16 @@ module.exports = function(app){
 
             if(!err){
                 data.context = "home";
+
+                var highlight = null
+                  , challenges = data.result.challenges
+                  , length = challenges.length;
+                if(challenges && length > 1){
+                    highlight = data.result.challenges.slice(0, 1);
+                    data.result.challenges = challenges.slice(1);
+                    data.result.highlight = highlight;
+                }
+
                 res.render('index', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
@@ -37,7 +47,6 @@ module.exports = function(app){
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
-
         };
 
         app.parse.getAlerts(options, next);
@@ -94,6 +103,19 @@ module.exports = function(app){
 
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
+
+                console.log(data.eventType);
+                switch(data.eventType){
+                    case 'Challenge': 
+                        data.challenge = true;
+                    break;
+                    case 'Idea':
+                        data.idea = true;
+                    break;
+                    default:
+                        data.alert = true;
+                    break;
+                }
 
                 res.render('detail', data);
             } else {

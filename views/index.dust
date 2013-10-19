@@ -33,17 +33,20 @@
 		</li>
 		{/result.ideas}
 	</ul>
-
+	{#result.highlight}
 	<a href="#" class="actionBtn rain ideesColors">
 		<div>
-			<img src="img/rainDrops.png" />
-			<p>
-				<span>Défi de la semaine</span><br />
-				Récupérer l'eau de pluie
-			</p>
-			<div class="clear"></div>
+			<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
+				<img src="img/rainDrops.png" />
+				<p>
+					<span>Défi de la semaine</span><br />
+					{title}
+				</p>
+				<div class="clear"></div>
+			</a>
 		</div>
 	</a>
+	{/result.highlight}
 
 	<ul class="list defis">
 		<li class="title">
