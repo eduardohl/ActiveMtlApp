@@ -4,7 +4,7 @@
 		<ul class="list {#type}{type}{:else}problemes{/type}">
 		{#data}
 			<li class="item">
-	            <a href="/" data-id="{objectId}" data-action="openDetail">
+	            <a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
 	              	{?picture.url}
 						<img src="{picture.url}" class="square" />
 					{:else}

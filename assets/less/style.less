@@ -285,11 +285,17 @@ ul.list{
 			text-align:left;
 			&.desc1{
 				font-size: .85em;
-				padding-top: .4em
+				padding-top: .4em;
+				&:first-letter {
+					text-transform: uppercase;
+				}
 			}
 			&.desc2{
 				font-size: 70%;
 				color: @grayColor;
+				&:first-letter {
+					text-transform: uppercase;
+				}
 			}
 		}
 		span.more{

@@ -474,11 +474,17 @@ ul.list li.item a p {
 }
 ul.list li.item a p.desc1 {
   font-size: .85em;
-  padding-top: 0.4em;
+  padding-top: .4em;
+}
+ul.list li.item a p.desc1:first-letter {
+  text-transform: uppercase;
 }
 ul.list li.item a p.desc2 {
   font-size: 70%;
   color: #929292;
+}
+ul.list li.item a p.desc2:first-letter {
+  text-transform: uppercase;
 }
 ul.list li.item a span.more {
   display: block;

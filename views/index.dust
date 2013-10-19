@@ -7,7 +7,7 @@
 		</li>
 		{#result.ideas}
 		<li class="item">
-			<a href="/" data-id="{objectId}" data-action="openDetail">
+			<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
 					<img src="{picture.url}" class="circle" />
 				{:else}
@@ -51,7 +51,7 @@
 		</li>
 		{#result.challenges}
 		<li class="item">
-			<a href="#" data-id="{objectId}" data-action="openDetail">
+			<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
 				<img src="{picture.url}" class="square" />
 				{:else}
@@ -95,7 +95,7 @@
 		</li>
 		{#result.alerts}
 		<li class="item">
-			<a href="/" data-id="{objectId}" data-action="openDetail">
+			<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
 					<img src="{picture.url}" class="square" />
 				{:else}

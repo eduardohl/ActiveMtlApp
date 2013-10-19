@@ -1,8 +1,7 @@
 var App = App || {
         openDetail: function(id){
-                if(this.isBridgeAvailable()){
-                        ActiveMTL.openDetail(id);
-                } else console.log(id);
+                ActiveMTL.openDetail(id);
+                return;
         },
 
         openShare: function(id){
@@ -26,8 +25,17 @@ $(document).ready(function(){
                 var self = $(this), 
                         id = self.data('id'),
                         fn = self.data('action');
+
+                if(!App.isBridgeAvailable()){
+                        console.log('Method call ID : ' + id);
+                        window.setTimeout(function(){
+                                window.location = self.attr('href');
+                                return false;
+                        }, 1000);
+                } else {
+                       App[fn].apply(App, [id]); 
+                }        
                 
-                App[fn].apply(App, [id]);
                 return false;
         });
 });
