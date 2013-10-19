@@ -9,7 +9,8 @@ module.exports = function(app){
         alerts:alerts,
         challenges:challenges,
         ideas:ideas,
-        detail:detail
+        detail:detail,
+        test: test
     };
 
     function index(req, res){
