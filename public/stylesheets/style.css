@@ -6,6 +6,7 @@
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+/* VARIABLES */
 article.detail {
   overflow: hidden;
   text-align: left;
@@ -30,34 +31,31 @@ article.detail #mapContainer #map-canvas {
 }
 article.detail .pic {
   width: 25%;
-  margin-right: 2%;
+  margin: 0 2% 2% 0;
   float: left;
-  margin-bottom: 2em;
 }
 article.detail .pic img {
   width: 100%;
 }
-article.detail .header {
-  width: 70%;
-  float: left;
-}
-article.detail .header h1 {
+article.detail .content h1 {
   margin-top: -5px;
   margin-bottom: 0;
   font-size: 1.5em;
 }
-article.detail .header h2 {
+article.detail .content h2 {
+  font-size: 1.1em;
   margin: 0;
 }
-article.detail .header h2 .district {
-  font-size: 0.5em;
+article.detail .content h2 .district {
+  font-size: 0.8em;
+  color: #929292;
 }
-article.detail .header .author {
+article.detail .content .author {
   font-size: 0.7em;
   margin-bottom: 10px;
   display: block;
 }
-article.detail .header .status {
+article.detail .content .status {
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -65,46 +63,50 @@ article.detail .header .status {
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-article.detail .header .status.Alert {
+article.detail .content .status.Alert {
   background-color: #facf33;
 }
-article.detail .header .status.Challenge {
+article.detail .content .status.Challenge {
   background-color: #56c23c;
 }
-article.detail .header .status.Idea {
+article.detail .content .status.Idea {
   background-color: #3391fa;
+}
+article.detail .content a {
+  display: inline;
+}
+article.detail .content .btn {
+  display: block;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+article.detail .content .btn.Alert {
+  background-color: #facf33;
+}
+article.detail .content .btn.Challenge {
+  background-color: #56c23c;
+}
+article.detail .content .btn.Idea {
+  background-color: #3391fa;
+}
+article.detail .content .votes {
+  display: block;
+}
+article.detail .content .votes a {
+  display: inline;
+  margin-left: 5px;
 }
 article.detail .description {
   width: 70%;
   float: left;
 }
-article.detail .description .btn {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 1.2em;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-article.detail .description .btn.Alert {
-  background-color: #facf33;
-}
-article.detail .description .btn.Challenge {
-  background-color: #56c23c;
-}
-article.detail .description .btn.Idea {
-  background-color: #3391fa;
-}
 article.detail .description .text {
   margin-top: 5px;
   margin-bottom: 10px;
-}
-article.detail .description .votes {
-  display: block;
-}
-article.detail .description .votes a {
-  display: inline;
-  margin-left: 5px;
 }
 
 /*---------------------------------------------------
@@ -120,9 +122,9 @@ article.detail .description .votes a {
 /*
 
 ActiveMTL Toolbox
-Émile Aublet
+Émile Aublet, Mathieu Corriveau, Frédéric Ginioux
 Nurun Inc. 
-v1.0
+v1.1
 
 */
 /* IMPORTS */
@@ -707,34 +709,31 @@ article.detail #mapContainer #map-canvas {
 }
 article.detail .pic {
   width: 25%;
-  margin-right: 2%;
+  margin: 0 2% 2% 0;
   float: left;
-  margin-bottom: 2em;
 }
 article.detail .pic img {
   width: 100%;
 }
-article.detail .header {
-  width: 70%;
-  float: left;
-}
-article.detail .header h1 {
+article.detail .content h1 {
   margin-top: -5px;
   margin-bottom: 0;
   font-size: 1.5em;
 }
-article.detail .header h2 {
+article.detail .content h2 {
+  font-size: 1.1em;
   margin: 0;
 }
-article.detail .header h2 .district {
-  font-size: 0.5em;
+article.detail .content h2 .district {
+  font-size: 0.8em;
+  color: #929292;
 }
-article.detail .header .author {
+article.detail .content .author {
   font-size: 0.7em;
   margin-bottom: 10px;
   display: block;
 }
-article.detail .header .status {
+article.detail .content .status {
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -742,44 +741,50 @@ article.detail .header .status {
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-article.detail .header .status.Alert {
+article.detail .content .status.Alert {
   background-color: #facf33;
 }
-article.detail .header .status.Challenge {
+article.detail .content .status.Challenge {
   background-color: #56c23c;
 }
-article.detail .header .status.Idea {
+article.detail .content .status.Idea {
   background-color: #3391fa;
+}
+article.detail .content a {
+  display: inline;
+}
+article.detail .content .btn {
+  display: block;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+article.detail .content .btn.Alert {
+  background-color: #facf33;
+}
+article.detail .content .btn.Challenge {
+  background-color: #56c23c;
+}
+article.detail .content .btn.Idea {
+  background-color: #3391fa;
+}
+article.detail .content .votes {
+  display: block;
+}
+article.detail .content .votes a {
+  display: inline;
+  margin-left: 5px;
 }
 article.detail .description {
   width: 70%;
   float: left;
 }
-article.detail .description .btn {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 1.2em;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-article.detail .description .btn.Alert {
-  background-color: #facf33;
-}
-article.detail .description .btn.Challenge {
-  background-color: #56c23c;
-}
-article.detail .description .btn.Idea {
-  background-color: #3391fa;
-}
 article.detail .description .text {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-article.detail .description .votes {
-  display: block;
-}
-article.detail .description .votes a {
-  display: inline;
-  margin-left: 5px;
-}
+
+/* VARIABLES */

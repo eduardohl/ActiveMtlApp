@@ -3,27 +3,27 @@
 
 
 <article class="detail {eventType}">
-
-    
+    {?location}
     <div id="mapContainer">
       <div id="map-canvas" data-latitude="{location.latitude}" data-longitude="{location.longitude}"></div>
     </div>
+    {/location}
 
     <div class="content">
-        <div class="pic">
-            <img src="{picture.url}" class="square" />
-        </div>
-        <div class="header">
-            <h1>{title}</h1>
-            <h2>{Category}<span class="district"> - {district}</span></h2>
-            <span class="author">soumis par {author}, il y a {timeago}</span>
-            {?Status}<span class="status {eventType}">Resolu</span>{/Status}
-        </div>
-        <div class="description">
-             <div class="text">{description|s}</div>
-             <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
-             {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
-        </div>
+      {?picture.url}
+      <div class="pic">
+          <img src="{picture.url}" class="square" />
+      </div>
+      {/picture.url}
+    
+      <h1>{title}</h1>
+      <h2>{Category}<span class="district"> - {district}</span></h2>
+      <span class="author">soumis par {author}, il y a {timeago}</span>
+      {?Status}<span class="status {eventType}">Resolu</span>{/Status}
+
+      <p class="text">{description|s}</p>
+      <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
+      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
     </div>
     
     {?challenge}{/challenge}

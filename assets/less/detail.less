@@ -1,13 +1,7 @@
 /* IMPORTS */
 @import "elements.less";
+@import "variables.less";
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
-
-@problemesColor: #facf33;
-@defisColor:#56c23c;
-@ideesColor:#3391fa;
-@roundcorners: 5px;
-@lightColor: #e6e6e6;
-
 
 
 article.detail{
@@ -32,25 +26,24 @@ article.detail{
    
    .pic{
        width:25%;
-       margin-right:2%;
+       margin:0 2% 2% 0;
        float:left;
-       margin-bottom:2em;
        img{
            width: 100%;
        }
    }
-   .header{
-       width:70%;
-       float:left;
+   .content{
        h1{
            margin-top:-5px;
            margin-bottom:0;
            font-size: 1.5em;
        }
        h2{
+           font-size: 1.1em;
            margin:0;
            .district{
-               font-size: 0.5em;
+               font-size: 0.8em;
+               color:@grayColor;
            }
        }
        .author{
@@ -69,12 +62,10 @@ article.detail{
            &.Challenge{background-color:@defisColor;}
            &.Idea{background-color:@ideesColor;}
        }
-   }
-   .description{
-       width:70%;
-       float:left;
+       a{ display:inline; }
        .btn{
            display:block;
+           float:left;
            margin-top:5px;
            margin-bottom:5px;
            font-size: 1.2em;
@@ -84,10 +75,6 @@ article.detail{
            &.Challenge{background-color:@defisColor;}
            &.Idea{background-color:@ideesColor;}
        }
-       .text{
-           margin-top:5px;
-           margin-bottom:10px;
-       }
        .votes{
            display:block;
            a{
@@ -95,5 +82,15 @@ article.detail{
                margin-left:5px;
            }
        }
+   }
+   .description{
+       width:70%;
+       float:left;
+       
+       .text{
+           margin-top:5px;
+           margin-bottom:10px;
+       }
+       
    }
 }
