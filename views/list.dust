@@ -42,7 +42,7 @@
 	              			{district}{?Category} - {Category}{/Category}
 	              		{/challenge}
 	              	</p>
-	              	{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
+	              	{?Vote}<span class="more onSquare">{Vote}</span>{/Vote}
 	            </a>
 	            <div class="clear"></div>
           	</li>

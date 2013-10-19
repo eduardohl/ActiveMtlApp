@@ -28,7 +28,8 @@ module.exports = function(){
         getAlerts: getAlerts,
         getDetail: getDetail,
         getLatest: getLatest,
-        getUser: getUser
+        getUser: getUser,
+        getEventStats: getEventStats
     };
 
     /*
@@ -136,6 +137,24 @@ module.exports = function(){
       		method: 'POST',
       		headers: { 'Content-type': 'application/json'},
       		params: {},
+	      	callback: function(err, res, body, success) {
+	        	var error = false;
+	        	if (err && !success){
+	        		error = true;
+	        	}
+
+	        	callback.apply(null, [false, body]);
+	      	}
+	    });
+	};
+
+	function getEventStats(eventId, callback){
+		
+		Parse._jsonRequest({
+      		url: '/1/functions/getEventStats',
+      		method: 'POST',
+      		headers: { 'Content-type': 'application/json'},
+      		params: {eventId: eventId},
 	      	callback: function(err, res, body, success) {
 	        	var error = false;
 	        	if (err && !success){
