@@ -33,8 +33,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                data.type = "problemes";
-                res.render('list', {data: data});
+                res.render('list', {data: data, type: "problemes", icon: "alert", alert: true});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
@@ -51,8 +50,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                data.type = "defis";
-                res.render('list', {data: data});
+                res.render('list', {data: data, type: "defis", icon: "defi", challenge: true});
             } else {
                 res.render('404', {errorMessage: 'Express'});
             }
@@ -69,8 +67,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                data.type = "idees";
-                res.render('list', {data: data});
+                res.render('list', {data: data, type: "idees", icon: "idee", idea: true});
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }

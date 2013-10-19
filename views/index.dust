@@ -17,13 +17,16 @@
 				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
+				{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 			</a>
 			<div class="clear"></div>
 		</li>
 		{:else}
 		<li class="item">
 			<a href="#">
-				<img src="../img/idee.png" class="circle" />
+				<span class="icon circle">
+					<img src="../img/idee_icon_square.png" class="circle" />
+				</span>
 				<p class="desc1">Il n'y a pas d'idées pour l'instant</p>
 			</a>
 			<div class="clear"></div>
@@ -52,18 +55,22 @@
 				{?picture.url}
 				<img src="{picture.url}" class="square" />
 				{:else}
-				<img src="../img/defi.png" class="square" />
+				<span class="icon circle">
+					<img src="../img/defi_icon_square.png" class="circle" />
+				</span>
 				{/picture.url}
 				<p class="desc1">{title}</p>
 				<p class="desc2">{Category}</p>
-				<span class="more onSquare">2452</span>
+				{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 			</a>
 			<div class="clear"></div>
 		</li>
 		{:else}
 		<li class="item">
 			<a href="#">
-				<img src="../img/defi.png" class="circle" />
+				<span class="icon circle">
+					<img src="../img/defi_icon_square.png" class="circle" />
+				</span>
 				<p class="desc1">Il n'y a pas de défis pour l'instant</p>
 			</a>
 			<div class="clear"></div>
@@ -92,10 +99,13 @@
 				{?picture.url}
 					<img src="{picture.url}" class="square" />
 				{:else}
-					<img src="../img/probleme.png" class="square" />
+					<span class="icon circle">
+						<img src="../img/alert_icon_square.png" class="circle" />
+					</span>
 				{/picture.url}
 				<p class="desc1">{district}</p>
 				<p class="desc2">{title}</p>
+				{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 			</a>
 			<div class="clear"></div>
 		</li>

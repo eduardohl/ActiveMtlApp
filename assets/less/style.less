@@ -294,7 +294,7 @@ ul.list{
 		}
 		span.more{
 			display:block;
-			width:1.5em;
+			min-width:1.5em;
 			height:1.5em;
 			position:absolute;
 			left:3.2em;
@@ -306,6 +306,7 @@ ul.list{
 			line-height:1em;
 			background-color:@defisColor;
 			.rounded(100px;);
+			padding: 0 2px;
 			
 			&.plus{
 				line-height:1.5em;
@@ -313,6 +314,8 @@ ul.list{
 			&.onSquare{
 				left:3.5em;
 				top:0.3em;
+				font-size: 0.6em;
+				line-height: 140%;
 			}
 		}
 	}
@@ -343,9 +346,9 @@ ul.list{
     	border-radius: 50px;
     	box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
     	img {
-    		width: 2em !important;
+    		width: 1.86em !important;
     		height: auto !important;
-    		top: 4px !important; left: 4px !important;
+    		top: 5px !important; left: 5px !important;
     	}
     }
 }

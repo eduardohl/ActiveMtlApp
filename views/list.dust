@@ -1,14 +1,26 @@
 {>layout/}
 {<content}
 	<section class="list">
-		<ul class="list {#data.type}{data.type}{:else}problemes{/data.type}">
+		<ul class="list {#type}{type}{:else}problemes{/type}">
 		{#data}
 			<li class="item">
 	            <a href="/" data-id="{objectId}" data-action="openDetail">
-	              <img class="square" src="{picture.url}">
-	              <p class="desc1">{title}</p>
-	              <p class="desc2">{description}</p>
-	              <span class="more onSquare">...</span>
+	              	{?picture.url}
+						<img src="{picture.url}" class="square" />
+					{:else}
+						<span class="icon circle">
+							<img src="../img/{icon}_icon_square.png" class="circle" />
+						</span>
+					{/picture.url}
+	              	<p class="desc1">{title}</p>
+	              	<p class="desc2">
+	              		{?challenge}
+	              			{Category}
+	              		{:else}
+	              			{district}{?Category} - {Category}{/Category}
+	              		{/challenge}
+	              	</p>
+	              	{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 	            </a>
 	            <div class="clear"></div>
           	</li>

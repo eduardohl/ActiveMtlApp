@@ -482,7 +482,7 @@ ul.list li.item a p.desc2 {
 }
 ul.list li.item a span.more {
   display: block;
-  width: 1.5em;
+  min-width: 1.5em;
   height: 1.5em;
   position: absolute;
   left: 3.2em;
@@ -496,6 +496,7 @@ ul.list li.item a span.more {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
+  padding: 0 2px;
 }
 ul.list li.item a span.more.plus {
   line-height: 1.5em;
@@ -503,6 +504,8 @@ ul.list li.item a span.more.plus {
 ul.list li.item a span.more.onSquare {
   left: 3.5em;
   top: 0.3em;
+  font-size: 0.6em;
+  line-height: 140%;
 }
 ul.list li.title h5 {
   padding: 0.5em;
@@ -531,10 +534,10 @@ ul.list li.title h5 {
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 }
 .icon.circle img {
-  width: 2em !important;
+  width: 1.86em !important;
   height: auto !important;
-  top: 4px !important;
-  left: 4px !important;
+  top: 5px !important;
+  left: 5px !important;
 }
 .idees .icon.circle {
   background: #e1efff;

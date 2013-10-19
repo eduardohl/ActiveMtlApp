@@ -18,7 +18,7 @@
             {?Status}<span class="status {eventType}">Resolu</span>{/Status}
         </div>
         <div class="description">
-             <div class="text">{description}</div>
+             <div class="text">{description|s}</div>
              <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
              {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
         </div>
