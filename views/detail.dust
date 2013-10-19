@@ -24,7 +24,7 @@
 
       <p class="text">{description|s}</p>
       <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
-      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} color defiscolor">Relever ce défi</a>{/Status}
+      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Relever ce défi</a>{/Status}
 
       {:else}
 
@@ -34,8 +34,8 @@
       {?Status}<span class="status {eventType}">Resolu</span>{/Status}
 
       <p class="text">{description|s}</p>
-      <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
-      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} color{?idea} ideescolor{/idea}{?alert} problemescolor{/alert}">Résolu?</a>{/Status}
+      <div class="votes">{Vote} votes <a href="#" class="btn" data-user="{user}">+1</a></div>
+      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
 
       {/challenge}
 

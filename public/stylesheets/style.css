@@ -99,7 +99,8 @@ article.detail .content .votes {
   display: block;
 }
 article.detail .content .votes a {
-  display: inline;
+  float: left;
+  width: auto;
   margin-left: 5px;
 }
 article.detail .description {
@@ -334,6 +335,56 @@ a {
   background: -moz-linear-gradient(center bottom, #b02f2c 0%, #731f1d 100%);
   background: -o-linear-gradient(#731f1d, #b02f2c);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#731f1d', endColorstr='#b02f2c', GradientType=0);
+}
+.bt.Alert {
+  background: #facf33;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f9c91a), color-stop(1, #fad342));
+  background: -ms-linear-gradient(bottom, #f9c91a, #fad342);
+  background: -moz-linear-gradient(center bottom, #f9c91a 0%, #fad342 100%);
+  background: -o-linear-gradient(#fad342, #f9c91a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fad342', endColorstr='#f9c91a', GradientType=0);
+  color: #fff;
+}
+.bt.Alert:hover {
+  background: #facf33;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f9c60b), color-stop(1, #fbd651));
+  background: -ms-linear-gradient(bottom, #f9c60b, #fbd651);
+  background: -moz-linear-gradient(center bottom, #f9c60b 0%, #fbd651 100%);
+  background: -o-linear-gradient(#fbd651, #f9c60b);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbd651', endColorstr='#f9c60b', GradientType=0);
+}
+.bt.Alert:active {
+  background: #facf33;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fbd54c), color-stop(1, #f4c106));
+  background: -ms-linear-gradient(bottom, #fbd54c, #f4c106);
+  background: -moz-linear-gradient(center bottom, #fbd54c 0%, #f4c106 100%);
+  background: -o-linear-gradient(#f4c106, #fbd54c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4c106', endColorstr='#fbd54c', GradientType=0);
+}
+.bt.Idea {
+  background: #2088fc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #077bfc), color-stop(1, #2f90fc));
+  background: -ms-linear-gradient(bottom, #077bfc, #2f90fc);
+  background: -moz-linear-gradient(center bottom, #077bfc 0%, #2f90fc 100%);
+  background: -o-linear-gradient(#2f90fc, #077bfc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f90fc', endColorstr='#077bfc', GradientType=0);
+  color: #fff;
+}
+.bt.Idea:hover {
+  background: #2088fc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0373f0), color-stop(1, #3e98fc));
+  background: -ms-linear-gradient(bottom, #0373f0, #3e98fc);
+  background: -moz-linear-gradient(center bottom, #0373f0 0%, #3e98fc 100%);
+  background: -o-linear-gradient(#3e98fc, #0373f0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e98fc', endColorstr='#0373f0', GradientType=0);
+}
+.bt.Idea:active {
+  background: #2088fc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3995fc), color-stop(1, #036ee6));
+  background: -ms-linear-gradient(bottom, #3995fc, #036ee6);
+  background: -moz-linear-gradient(center bottom, #3995fc 0%, #036ee6 100%);
+  background: -o-linear-gradient(#036ee6, #3995fc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#036ee6', endColorstr='#3995fc', GradientType=0);
 }
 .actionBtn {
   text-decoration: none;
@@ -827,7 +878,8 @@ article.detail .content .votes {
   display: block;
 }
 article.detail .content .votes a {
-  display: inline;
+  float: left;
+  width: auto;
   margin-left: 5px;
 }
 article.detail .description {
