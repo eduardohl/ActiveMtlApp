@@ -147,8 +147,10 @@ module.exports = function(app){
     }
 
     function test(){
-        app.parse.getUser('', function(err, user){
-            console.log(user);
+        app.parse.getStats('eSHV76oDof', function(err, data){
+            if(!err){
+                console.log(data);
+            } else console.log('Error');
         });
     }
 }

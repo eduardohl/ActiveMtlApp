@@ -61,6 +61,8 @@ module.exports = function(){
 			}, options)
 		};
 
+		console.log(params);
+
 		Parse.getObjects('Event', params, function(err, res, body, success){
 			var error = false;
 			if(!success){
