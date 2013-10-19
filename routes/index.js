@@ -129,8 +129,7 @@ module.exports = function(app){
                 }
 
                 var owner = data.createdBy;
-                if(owner.objectId){
-                    console.log(owner);
+                if(!owner.objectId){
                     app.parse.getUser(owner.objectId, function(err, user){
                         if(!err){
                             data.owner = user.username;
