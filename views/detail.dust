@@ -15,7 +15,19 @@
           <img src="{picture.url}" class="square" />
       </div>
       {/picture.url}
+
+      {?challenge}
     
+      <h1>{title}</h1>
+      <h2>{Category}<span class="district"> - {district}</span></h2>
+      {?Status}<span class="status {eventType}">Resolu</span>{/Status}
+
+      <p class="text">{description|s}</p>
+      <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
+      {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
+
+      {:else}
+
       <h1>{title}</h1>
       <h2>{Category}<span class="district"> - {district}</span></h2>
       <span class="author">soumis par {author}, il y a {timeago}</span>
@@ -24,9 +36,13 @@
       <p class="text">{description|s}</p>
       <div class="votes">{Vote} votes <a href="#" data-user="{user}">+1</a></div>
       {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType}">Résolu?</a>{/Status}
+
+      {/challenge}
+
+
     </div>
     
-    {?challenge}{/challenge}
+    
     {?idea}{/idea}
     {?alert}{/alert}
 </article>
