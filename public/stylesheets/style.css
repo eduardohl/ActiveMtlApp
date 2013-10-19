@@ -75,6 +75,9 @@ article.detail .content .status.Idea {
 article.detail .content a {
   display: inline;
 }
+article.detail .content a.linkResolved {
+  display: inline-block;
+}
 article.detail .content .btn {
   display: block;
   float: left;
@@ -102,9 +105,11 @@ article.detail .content .votes a {
   float: left;
   width: auto;
   margin-left: 5px;
+  font-size: 16px;
 }
 article.detail .content .votes span {
-  display: block;
+  float: left;
+  margin: 1.1em 0.5em 0 0;
 }
 article.detail .description {
   width: 70%;
@@ -857,6 +862,9 @@ article.detail .content .status.Idea {
 article.detail .content a {
   display: inline;
 }
+article.detail .content a.linkResolved {
+  display: inline-block;
+}
 article.detail .content .btn {
   display: block;
   float: left;
@@ -884,9 +892,11 @@ article.detail .content .votes a {
   float: left;
   width: auto;
   margin-left: 5px;
+  font-size: 16px;
 }
 article.detail .content .votes span {
-  display: block;
+  float: left;
+  margin: 1.1em 0.5em 0 0;
 }
 article.detail .description {
   width: 70%;
