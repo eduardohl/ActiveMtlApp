@@ -115,7 +115,7 @@ module.exports = function(){
 
 	function getUser(id, callback){
 		console.log(id);
-		Parse.getObject('User', id, function(err, res, body, success){
+		Parse.getObject('_User', id, function(err, res, body, success){
 			console.log(body);
 			var error = false;
 

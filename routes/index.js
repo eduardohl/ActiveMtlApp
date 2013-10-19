@@ -129,7 +129,7 @@ module.exports = function(app){
                 }
 
                 var owner = data.createdBy;
-                if(!owner.objectId){
+                if(owner.objectId){
                     app.parse.getUser(owner.objectId, function(err, user){
                         if(!err){
                             data.owner = user.username;
@@ -145,5 +145,11 @@ module.exports = function(app){
         };
 
         app.parse.getDetail({id: options, userId: userid}, next);
+    }
+
+    function test(){
+        app.parse.getUser('', function(err, user){
+            console.log(user);
+        });
     }
 }
