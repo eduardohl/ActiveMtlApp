@@ -61,8 +61,6 @@ module.exports = function(){
 			}, options)
 		};
 
-		console.log(params);
-
 		Parse.getObjects('Event', params, function(err, res, body, success){
 			var error = false;
 			if(!success){
@@ -116,9 +114,8 @@ module.exports = function(){
 	};
 
 	function getUser(id, callback){
-		console.log(id);
+		
 		Parse.getObject('_User', id, function(err, res, body, success){
-			console.log(body);
 			var error = false;
 
 			if(!success){
