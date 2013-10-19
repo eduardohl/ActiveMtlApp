@@ -25,10 +25,6 @@
         {?Status}<span class="status {eventType}">Resolu</span>{/Status}
 
         <p class="text">{description|s}</p>
-        <div class="votes">
-        <span>{Vote} votes </span>
-        <a href="#" data-user="{user}" class="bt">Voter +1</a>
-        </div>
         {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Relever ce défi</a>{/Status}
       {/challenge}
 
@@ -37,12 +33,8 @@
       {?alert}
         <h1>{title}</h1>
         <h2>{Category}<span class="district"> - {district}</span></h2>
-        <span class="author">soumis par {#owner}{owner}{/owner}, il y a {timeago}</span>
+        <span class="author">{#username}Soumis par {username},{/username} il y a {timeago}</span>
         {?Status}<span class="status {eventType}">Resolu</span>{/Status}
-
-
-        <p class="text">{description|s}</p>
-        <div class="votes">
         
         {?NoVote}
         <span>Personne n'a encore appuyé cette alerte . Soyez le premier à voter pour l'appuyer!</span>
@@ -61,14 +53,17 @@
         {/ThreeVotes}
 
         {?MultiVotes}
-        <span>{Vote} autres Montréalais ont voté pour cette alerte. Faites comme eux, donnez votre avis!</span>
+        <span>Appuyé par [Paul P.], [Clara C.] et {Vote} autres</span>
         {/MultiVotes}
 
-        <a href="#" class="btn bt{?alert} alert{/alert}{?idea} Idea{/idea}" data-user="{user}">Appuyez cette alerte</a>
+        <a href="#" class="btn bt{?alert} alert{/alert}{?idea} Idea{/idea}" data-user="{user}">Voter</a>
+        <div class="clear"></div>
 
         </div>
+
+        <p class="text">{description|s}</p>
         
-        {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
+        {?Status} {:else}<a href="#" data-user="{user}" class="linkResolved">Ce cas est réglé?</a>{/Status}
       {/alert}
 
 
@@ -103,11 +98,9 @@
         <span>{Vote} votes</span>
         {/MultiVotes}
 
-        <a href="#" class="btn bt Idea" data-user="{user}">Soutenez cette suggestion</a>
+        <a href="#" class="btn bt Idea" data-user="{user}">Soutener cette suggestion</a>
 
         </div>
-        
-        {?Status} {:else}<a href="#" data-user="{user}" class="btn {eventType} bt">Résolu?</a>{/Status}
       {/idea}
 
 
