@@ -137,6 +137,28 @@ a {
 		}
 	}
 
+	&.Alert{
+		.gradient(@problemesColor, darken(@problemesColor, 5%), lighten(@problemesColor, 3%));
+		color: #fff;
+		&:hover{
+			.gradient(@problemesColor, darken(@problemesColor, 8%), lighten(@problemesColor, 6%));
+		}
+		&:active{
+			.gradient(@problemesColor, lighten(@problemesColor, 5%), darken(@problemesColor, 10%));
+		}
+	}
+
+	&.Idea{
+		.gradient(@ideesColor, darken(@ideesColor, 5%), lighten(@ideesColor, 3%));
+		color: #fff;
+		&:hover{
+			.gradient(@ideesColor, darken(@ideesColor, 8%), lighten(@ideesColor, 6%));
+		}
+		&:active{
+			.gradient(@ideesColor, lighten(@ideesColor, 5%), darken(@ideesColor, 10%));
+		}
+	}
+
 }
 .actionBtn{
 	text-decoration:none;
