@@ -104,7 +104,6 @@ module.exports = function(app){
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
 
-                console.log(data.eventType);
                 switch(data.eventType){
                     case 'Challenge': 
                         data.challenge = true;

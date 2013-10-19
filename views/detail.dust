@@ -45,7 +45,6 @@
                 break;
          }
 
-
         var image = {
           url: imagepath,
           size: new google.maps.Size(50, 50),
