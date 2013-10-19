@@ -3,20 +3,20 @@
 	<section>
 	<ul class="list idees">
 		<li class="title">
-			<h5>Dernières idées soumises</h5>
+			<h5>Dernières suggestions soumises</h5>
 		</li>
 		{#result.ideas}
 		<li class="item">
 			<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail">
 				{?picture.url}
-					<img src="{picture.url}" class="circle" />
+					<img src="{picture.url}" class="square" />
 				{:else}
 					<span class="icon circle">
 						<img src="../img/idee_icon_square.png" class="circle" />
 					</span>
 				{/picture.url}
-				<p class="desc1">{district}</p>
-				<p class="desc2">{title}</p>
+				<p class="desc1">{title}</p>
+				<p class="desc2">{district}</p>
 				{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 			</a>
 			<div class="clear"></div>
@@ -33,17 +33,18 @@
 		</li>
 		{/result.ideas}
 	</ul>
-
-	<a href="#" class="actionBtn rain ideesColors">
+	{#result.highlight}
+	<a href="/detail/{objectId}" data-id="{objectId}" data-action="openDetail" class="actionBtn rain ideesColors">
 		<div>
 			<img src="img/rainDrops.png" />
 			<p>
 				<span>Défi de la semaine</span><br />
-				Récupérer l'eau de pluie
+				{title}
 			</p>
 			<div class="clear"></div>
 		</div>
 	</a>
+	{/result.highlight}
 
 	<ul class="list defis">
 		<li class="title">
@@ -91,7 +92,7 @@
 	//-->
 	<ul class="list problemes">
 		<li class="title">
-			<h5>Derniers problèmes enregistrés</h5>
+			<h5>Derniers alertes soumises</h5>
 		</li>
 		{#result.alerts}
 		<li class="item">
@@ -103,8 +104,8 @@
 						<img src="../img/alert_icon_square.png" class="circle" />
 					</span>
 				{/picture.url}
-				<p class="desc1">{district}</p>
-				<p class="desc2">{title}</p>
+				<p class="desc1">{title}</p>
+				<p class="desc2">{district}</p>
 				{?upvote}<span class="more onSquare">{upvote}</span>{/upvote}
 			</a>
 			<div class="clear"></div>
