@@ -120,6 +120,24 @@ module.exports = function(app){
                     break;
                 }
 
+                switch(data.Vote){
+                    case 0:
+                        data.NoVote = true;
+                    break;
+                    case 1:
+                        data.OneVote = true;
+                    break;
+                    case 2:
+                        data.TwoVotes = true;
+                    break;
+                    case 3:
+                        data.ThreeVotes = true;
+                    break;
+                    default:
+                        data.MultiVotes = true;
+                    break;
+                }
+
                 //Location override
                 if(data.location){
                     var loc = data.location;
