@@ -27,7 +27,8 @@ module.exports = function(){
         getChallenges: getChallenges,
         getAlerts: getAlerts,
         getDetail: getDetail,
-        getLatest: getLatest
+        getLatest: getLatest,
+        getUser: getUser
     };
 
     /*
@@ -102,6 +103,20 @@ module.exports = function(){
 		}
 
 		Parse.getObject('Event', id, params, function(err, res, body, success){
+			var error = false;
+
+			if(!success){
+				error = true;
+			}
+
+			callback.apply(null, [error, body]);
+		});
+	};
+
+	function getUser(id, callback){
+		console.log(id);
+		Parse.getObject('User', id, function(err, res, body, success){
+			console.log(body);
 			var error = false;
 
 			if(!success){

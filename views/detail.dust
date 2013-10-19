@@ -30,7 +30,7 @@
 
       <h1>{title}</h1>
       <h2>{Category}<span class="district"> - {district}</span></h2>
-      <span class="author">soumis par {username}, il y a {timeago}</span>
+      <span class="author">soumis par {#owner}{owner}{/owner}, il y a {timeago}</span>
       {?Status}<span class="status {eventType}">Resolu</span>{/Status}
 
       <p class="text">{description|s}</p>
