@@ -50,6 +50,9 @@ article.detail{
            font-size: 0.7em;
            margin-bottom: 10px;
            display: block;
+           &:first-letter {
+            text-transform: uppercase;
+           }
        }
        .status{
            display:block;
@@ -90,12 +93,8 @@ article.detail{
        }
    }
    .description{
-       width:70%;
-       float:left;
-       
-       .text{
-           margin-top:5px;
-           margin-bottom:10px;
+       &:first-letter {
+        text-transform: uppercase;
        }
        
    }

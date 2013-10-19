@@ -55,6 +55,9 @@ article.detail .content .author {
   margin-bottom: 10px;
   display: block;
 }
+article.detail .content .author:first-letter {
+  text-transform: uppercase;
+}
 article.detail .content .status {
   display: block;
   margin-top: 5px;
@@ -111,13 +114,8 @@ article.detail .content .votes span {
   float: left;
   margin: 1.1em 0.5em 0 0;
 }
-article.detail .description {
-  width: 70%;
-  float: left;
-}
-article.detail .description .text {
-  margin-top: 5px;
-  margin-bottom: 10px;
+article.detail .description:first-letter {
+  text-transform: uppercase;
 }
 
 /*---------------------------------------------------
@@ -794,6 +792,9 @@ article.detail .content .author {
   margin-bottom: 10px;
   display: block;
 }
+article.detail .content .author:first-letter {
+  text-transform: uppercase;
+}
 article.detail .content .status {
   display: block;
   margin-top: 5px;
@@ -850,13 +851,8 @@ article.detail .content .votes span {
   float: left;
   margin: 1.1em 0.5em 0 0;
 }
-article.detail .description {
-  width: 70%;
-  float: left;
-}
-article.detail .description .text {
-  margin-top: 5px;
-  margin-bottom: 10px;
+article.detail .description:first-letter {
+  text-transform: uppercase;
 }
 
 /* VARIABLES */
