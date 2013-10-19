@@ -125,7 +125,7 @@ module.exports = function(app){
                         data.location = null;
                     }
                 }
-
+                
                 res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
