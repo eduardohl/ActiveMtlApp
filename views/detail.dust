@@ -29,16 +29,12 @@
       {/challenge}
 
 
-
       <!-- ALERTES -->
       {?alert}
         <h1>{title}</h1>
         <h2>{Category}<span class="district"> - {district}</span></h2>
         <span class="author">{#username}Soumis par {username},{/username} il y a {timeago}</span>
         {?Status}<span class="status {eventType}">Resolu</span>{/Status}
-
-        
-        <div class="votes">
         
         {?NoVote}
         <span>Personne n'a encore appuyé cette alerte . Soyez le premier à voter pour l'appuyer!</span>
@@ -106,8 +102,6 @@
 
         </div>
       {/idea}
-
-      
 
 
     </div>

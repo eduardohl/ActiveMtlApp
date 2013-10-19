@@ -9,7 +9,8 @@ module.exports = function(app){
         alerts:alerts,
         challenges:challenges,
         ideas:ideas,
-        detail:detail
+        detail:detail,
+        test: test
     };
 
     function index(req, res){
@@ -23,7 +24,7 @@ module.exports = function(app){
                   , challenges = data.result.challenges
                   , length = challenges.length;
                 if(challenges && length > 1){
-                    highlight = data.result.challenges.slice(0, 1);
+                    highlight = challenges.slice(0, 1);
                     data.result.challenges = challenges.slice(1);
                     data.result.highlight = highlight;
                 }
@@ -59,8 +60,7 @@ module.exports = function(app){
 
         var next = function(err, data){
             if(!err){
-                var highlight = data.splice(0, 1)
-                  , data = data.slice(1);
+                var highlight = data.splice(0, 1);
 
                 res.render('list', {total: data.length, highlight: highlight, data: data, type: "defis", icon: "defi", challenge: true});
             } else {
@@ -166,8 +166,10 @@ module.exports = function(app){
     }
 
     function test(){
-        app.parse.getUser('', function(err, user){
-            console.log(user);
+        app.parse.getEventStats('eSHV76oDof', function(err, data){
+            if(!err){
+                console.log(data);
+            } else console.log('Error');
         });
     }
 }

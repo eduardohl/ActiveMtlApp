@@ -57,7 +57,7 @@
 				<img src="{picture.url}" class="square" />
 				{:else}
 				<span class="icon circle">
-					<img src="../img/defi_icon_square.png" class="circle" />
+					<img src="/img/defi_icon_square.png" class="circle" />
 				</span>
 				{/picture.url}
 				<p class="desc1">{title}</p>
@@ -70,7 +70,7 @@
 		<li class="item">
 			<a href="#">
 				<span class="icon circle">
-					<img src="../img/defi_icon_square.png" class="circle" />
+					<img src="/img/defi_icon_square.png" class="circle" />
 				</span>
 				<p class="desc1">Il n'y a pas de défis pour l'instant</p>
 			</a>
@@ -101,7 +101,7 @@
 					<img src="{picture.url}" class="square" />
 				{:else}
 					<span class="icon circle">
-						<img src="../img/alert_icon_square.png" class="circle" />
+						<img src="/img/alert_icon_square.png" class="circle" />
 					</span>
 				{/picture.url}
 				<p class="desc1">{title}</p>
@@ -119,7 +119,7 @@
 		{:else}
 		<li class="item">
 			<a href="#">
-				<img src="../img/probleme.png" class="circle" />
+				<img src="/img/probleme.png" class="circle" />
 				<p class="desc1">Il n'y a pas de problèmes pour l'instant</p>
 			</a>
 			<div class="clear"></div>
