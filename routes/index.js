@@ -104,6 +104,7 @@ module.exports = function(app){
                 var timeAgo = app.utils.timeAgo(new Date(data.createdAt));
                 data.timeago = timeAgo;
 
+                //Event type
                 switch(data.eventType){
                     case 'Challenge': 
                         data.challenge = true;
@@ -116,12 +117,21 @@ module.exports = function(app){
                     break;
                 }
 
+                //Location override
+                console.log(data);
+                if(data.location){
+                    var loc = data.location;
+                    if(loc.latitude == 0.0 && loc.longitude == 0.0){
+                        data.location = null;
+                    }
+                }
+
                 res.render('detail', data);
             } else {
                 res.render('404', { errorMessage: 'Express' });
             }
         };
 
-        app.parse.getDetail(options, next);
+        app.parse.getDetail({id: options, userId: userid}, next);
     }
 }
